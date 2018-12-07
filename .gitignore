@@ -1,0 +1,14 @@
+**.DS_Store
+.idea/*
+.project
+.htaccess
+*.prefs
+*.buildpath
+*.buildpath
+*.prefs
+.buildpath
+.settings/
+.buildpath
+.settings/*
+.idea/
+.DS_Store
