@@ -1,0 +1,404 @@
+.clearfix {
+    zoom: 1
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+body {
+    background-color: #f4f4f4
+}
+
+.response-layout {
+    min-width: 1200px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.billboard {
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-image: url("../img/case/banner@1x.jpg");
+
+}
+
+.billboard .shell {
+    height: 750px
+}
+
+.billboard .shell .case-pro {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.billboard .shell .case-pro hgroup {
+    /*padding-left: 80px*/
+}
+
+.billboard h1 {
+    font-weight: bold
+}
+
+.billboard p {
+    color: #fff;
+    line-height: 1.4
+}
+
+.billboard .zh {
+    font-size: 24px;
+    margin-top:12px;
+}
+
+.billboard .zh:nth-of-type(1) {
+    /*color: #ffc75a;*/
+    margin-top: 0
+}
+
+.billboard .en {
+    font-size: 16px;
+    margin-top:5px;
+}
+
+.partner-banner {
+    height: 55px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background-color: #f8f8fa
+}
+
+.partner-banner h2 {
+    font-size: 16px;
+    color: #9BA2B4
+}
+
+.partner-banner .ptn:nth-of-type(1) {
+    width: 99px;
+    height: 22px
+}
+
+.partner-banner .ptn:nth-of-type(2) {
+    width: 89px;
+    height: 15px
+}
+
+.partner-banner .ptn:nth-of-type(3) {
+    width: 106px;
+    height: 22px
+}
+
+.partner-banner .ptn:nth-of-type(4) {
+    width: 80px;
+    height: 27px
+}
+
+.partner-banner .ptn img {
+    max-width: 100%
+}
+
+.no-flexbox .partner-banner {
+    display: table;
+    width: 100%
+}
+
+.no-flexbox .partner-banner > * {
+    display: table-cell
+}
+
+.no-flexbox .partner-banner h2 {
+    line-height: 55px
+}
+
+.no-flexbox .partner-banner .ptn {
+    vertical-align: middle;
+    width: auto
+}
+
+.no-flexbox .partner-banner .ptn img {
+    max-width: 100%
+}
+
+.no-flexbox .partner-banner .ptn:last-child {
+    width: 80px
+}
+
+.case-contain {
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 80px
+}
+
+.case-subTitle {
+    font-size: 20px;
+    margin-bottom: 20px
+}
+
+.case-title {
+    font-size: 36px;
+    margin-bottom: 20px
+}
+
+.case-info {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 128px;
+    padding-bottom: 60px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.case-info .detail-desc {
+    margin-top: 20px;
+    line-height: 1.8;
+    font-size: 13px
+}
+
+.case-info .main-info {
+    width: 52%
+}
+
+.case-info .desc-wrap {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.case-info .sub-info {
+    width: 274px
+}
+
+.case-info .count-number {
+    font-size: 60px
+}
+
+.case-info .count-unit {
+    font-size: 16px
+}
+
+.case-info .quote-words {
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: 40px
+}
+
+.case-info .quote-name {
+    margin-bottom: 5px
+}
+
+.case-info .quote-name, .case-info .quote-role {
+    font-size: 13px
+}
+
+.case-desc {
+    font-size: 16px;
+    line-height: 1.8
+}
+
+.case-pic {
+    position: relative;
+    padding-top: 42.79279%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+}
+
+.case-pic .shell {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%
+}
+
+.no-flexbox .case-contain .main-info, .no-flexbox .case-contain .sub-info {
+    display: inline-block
+}
+
+.no-flexbox .case-contain .case-info {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.no-flexbox .case-contain .sub-info {
+    float: right
+}
+
+.customer {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 50px
+}
+
+.customer .title {
+    color: #9BA2B5
+}
+
+.customer .title h2 {
+    font-size: 24px
+}
+
+.customer .title p {
+    font-size: 18px;
+    margin-top: 24px
+}
+
+.customer .title.show {
+    transition: ease-out .95s;
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1
+}
+
+.customer .clients {
+    margin-top: 81px;
+    width: 100%
+}
+
+.customer .clients [client*='m$'] {
+    background-size: 127px 27px
+}
+
+.customer .clients [client*='samsung'] {
+    background-size: 113px 18px
+}
+
+.customer .clients [client*='sony'] {
+    background-size: 48px 75px
+}
+
+.customer .clients [client*='imax'] {
+    background-size: 83px 16px
+}
+
+.customer .clients [client*='guobo'] {
+    background-size: 129px 47px
+}
+
+.customer .clients [client*='gugong'] {
+    background-size: 68px 81px
+}
+
+.customer .clients [client*='crh'] {
+    background-size: 104px 31px
+}
+
+.customer .clients [client*='cctv'] {
+    background-size: 79px 23px
+}
+
+.customer .clients [client*='audi'] {
+    background-size: 72px 46px
+}
+
+.customer .clients [client*='toyota'] {
+    background-size: 70px 51px
+}
+
+.customer .clients [client*='subaru'] {
+    background-size: 90px 46px
+}
+
+.customer .clients [client*='yiqi'] {
+    background-size: 59px 56px
+}
+
+.customer .clients [client*='ctf'] {
+    background-size: 86px 48px
+}
+
+.customer .clients [client*='marykay'] {
+    background-size: 155px 24px
+}
+
+.customer .clients [client*='k11_'] {
+    background-size: 55px 28px
+}
+
+.customer .clients [client*='pizza'] {
+    background-size: 58px 55px
+}
+
+.customer .clients .row {
+    z-index: 1
+}
+
+.customer .clients .row:not(:last-child) {
+    padding-bottom: 50px
+}
+
+.customer .clients .row:first-child .cell {
+    height: 76px
+}
+
+.customer .clients .row:nth-child(2) .cell {
+    height: 82px
+}
+
+.customer .clients .row:nth-child(3) .cell {
+    height: 56px
+}
+
+.customer .clients .row:last-child .cell {
+    height: 56px
+}
+
+.customer .clients .cell {
+    box-sizing: content-box;
+    background-origin: content-box;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    z-index: 1
+}
+
+.customer .clients .cell:not(:last-child) {
+    padding-right: calc((100% - 475px) / 3)
+}
+
+.customer .clients .cell:first-child {
+    width: 130px
+}
+
+.customer .clients .cell:nth-child(2) {
+    width: 155px
+}
+
+.customer .clients .cell:nth-child(3) {
+    width: 105px
+}
+
+.customer .clients .cell:last-child {
+    width: 83px
+}
+
+.customer .clients .cell img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    vertical-align: middle
+}
