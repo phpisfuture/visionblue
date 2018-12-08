@@ -902,8 +902,8 @@ body.hide-scroll-bar {
 
 .platform .safe-desc {
     position: absolute;
-    bottom: 50px;
-    left: 50px;
+    bottom: 47%;
+    left: 23%;
     color: #fff
 }
 
@@ -1008,7 +1008,7 @@ body.hide-scroll-bar {
     top: 0;
     left: 0;
     display: block;
-    width: 450px;
+    width: 100%;
     height: 100%;
     font-size: 0;
     transition: all .5s
@@ -1017,7 +1017,6 @@ body.hide-scroll-bar {
 .station .station-grid .desc-con {
     position: absolute;
     top: 40%;
-    right: 100px
 }
 
 .station .station-grid .desc-con .center {
@@ -1027,7 +1026,7 @@ body.hide-scroll-bar {
 
 .station .station-grid .desc {
     text-align: left;
-    color: #28303f
+    color: #fff
 }
 
 .station .station-grid .desc h1 {
@@ -1047,7 +1046,6 @@ body.hide-scroll-bar {
 }
 
 .section-nodes .business {
-    width: 690px;
     height: 100%;
     position: absolute;
     right: 0
@@ -1062,7 +1060,7 @@ body.hide-scroll-bar {
 .section-nodes .business-des {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 50%;
     height: 100%;
     text-align: left;
@@ -1081,7 +1079,7 @@ body.hide-scroll-bar {
 }
 
 .section-nodes .business-des .business-pro a {
-    color: #464749
+    color: #fff
 }
 
 .section-nodes .business-des h1 {
@@ -1089,7 +1087,7 @@ body.hide-scroll-bar {
     line-height: 50px;
     font-size: 32px;
     font-weight: bold;
-    color: #464749
+    color: #fff
 }
 
 .section-nodes .business-des p {
