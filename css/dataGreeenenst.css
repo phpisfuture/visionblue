@@ -1,0 +1,484 @@
+.clearfix {
+    zoom: 1
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+.solution-layout {
+    width: 100%;
+    font-family: 'PingFangSC-Regular', 'Helvetica Neue', 'Helvetica'
+}
+
+.solution-layout,
+.safe-content,
+.serve-content,
+.serve-time,
+.learn-more {
+    min-width: 1200px
+}
+
+.billboard {
+    height: 750px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    color: #fff;
+    font-weight: lighter
+}
+
+.billboard .bill-content {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto
+}
+
+.billboard .bill-content .sloution-pro {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.billboard .bill-content .safe-solgan {
+    font-weight: 200;
+    width: 500px;
+    padding-left: 80px
+}
+
+.billboard .bill-content .safe-solgan h1 {
+    font-size: 140px
+}
+
+.billboard .bill-content .safe-solgan h2 {
+    text-align: right;
+    padding-right: 3px;
+    line-height: 28px;
+    font-size: 34px
+}
+
+.billboard .shell {
+    height: 750px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.billboard h1 {
+    font-family: "PingFang TC";
+    font-size: 145px
+}
+
+.billboard h2 {
+    font-weight: bold;
+    margin-top: -50px;
+    margin-left: 190px;
+    margin-bottom: 50px;
+    font-size: 32px
+}
+
+.billboard h3 {
+    font-size: 20px;
+    font-weight: bold
+}
+
+.safe-content {
+    width: 100%;
+    background: #fff;
+    padding-top: 100px;
+    padding-bottom: 47px;
+    color: #464749
+}
+
+.safe-content .safe-news {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 54px
+}
+
+.safe-content .safe-news h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #464749;
+    margin: 40px 0
+}
+
+.safe-content .safe-news p {
+    height: 60px;
+    line-height: 30px;
+    font-size: 15px;
+    margin-bottom: 10px
+}
+
+.safe-content .safe-news .safe-video:nth-of-type(1) {
+    margin-right: 60px
+}
+
+.safe-content .safe-news .safe-video {
+    position: relative;
+    margin: 43px 0;
+    display: inline-block
+}
+
+.safe-content .safe-news .safe-video:first-child {
+    margin-right: 90px
+}
+
+.safe-content .safe-news .safe-video img {
+    display: block;
+    width: 210px;
+    height: 126px;
+    cursor: pointer
+}
+
+.safe-content .safe-news .safe-video .icon-play-fei {
+    position: absolute;
+    cursor: pointer;
+    top: 20%;
+    left: 36%;
+    width: 53px;
+    height: 53px;
+    background: url("../img/dataGreenest/icons/icon@1x.png") no-repeat center;
+    background-size: cover
+}
+
+.safe-content .safe-news .safe-video .icon-play {
+    position: absolute;
+    cursor: pointer;
+    top: 20%;
+    left: 36%;
+    width: 53px;
+    height: 53px;
+    background: url("../img/dataGreenest/icons/icon@1x.png") no-repeat center;
+    background-size: cover
+}
+
+.safe-content .safe-news .safe-video span {
+    display: block;
+    font-size: 12px;
+    margin: 10px 0
+}
+
+.content {
+    width: 1200px;
+    height: 700px;
+    color: #464749;
+    margin: 0 auto
+}
+
+.content img {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+}
+
+.content h1 {
+    font-size: 30px;
+    font-weight: bold
+}
+
+.content p {
+    height: 24px;
+    line-height: 24px;
+    font-size: 15px
+}
+
+.serve-content {
+    margin: 50px 0
+}
+
+.serve-content .serve-pro {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-grid-column-align: center;
+    justify-items: center
+}
+
+.serve-content img {
+    width: 600px;
+    background: #f4f6f6
+}
+
+.serve-content .serve-mes {
+    margin: auto;
+    width: 33%;
+    white-space: normal;
+    text-align: left
+}
+
+.serve-content .serve-mes h1 {
+    margin-bottom: 28px
+}
+
+.serve-content .sever-model img {
+    background: none;
+    height: 700px
+}
+
+@keyframes opacity2 {
+    0% {
+        opacity: 0
+    }
+
+    30% {
+        opacity: .4
+    }
+
+    50% {
+        opacity: .6
+    }
+
+    80% {
+        opacity: .8
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.serve-time {
+    margin-bottom: 50px
+}
+
+.serve-time .time-cont {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.serve-time .time-cont .time-thing {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: #f4f6f6
+}
+
+.serve-time .times {
+    display: block;
+    position: absolute;
+    top: 195px;
+    left: 155px;
+    width: 300px
+}
+
+.serve-time .times .imgs {
+    overflow: hidden;
+    height: 250px;
+    width: 300px
+}
+
+.serve-time .times .imgs .time-mes img {
+    display: block;
+    width: 127px;
+    margin-left: 58px;
+    animation: 1s opacity2 0s;
+    -webkit-animation: 1s opacity2 0s
+}
+
+.serve-time .times .imgs .time-thirty {
+    margin-top: 30px;
+    animation: 1s opacity2 0s;
+    -webkit-animation: 1s opacity2 0s
+}
+
+.serve-time .times .imgs .time-thirty img {
+    display: block;
+    width: 300px
+}
+
+.serve-time .times .desc {
+    margin-top: 55px;
+    margin-left: 40px;
+    font-size: 18px
+}
+
+.serve-time .times .desc span.time-mes-desc {
+    display: inline-block
+}
+
+.serve-time .times .desc span.time-thirty-desc {
+    display: none
+}
+
+.serve-time .time-pro {
+    width: 33%;
+    margin: 0 auto
+}
+
+.serve-time .time-pro h1 {
+    margin-bottom: 30px
+}
+
+.security-img {
+    height: 100%;
+    padding-top: 15%
+}
+
+.serve-content .serve-security img {
+    background: none;
+    margin: 0 auto
+}
+
+.serve-content .serve-security .serve-mes {
+    width: 50%;
+    padding-left: 100px
+}
+
+.security-img {
+    width: 50%
+}
+
+.learn-more {
+    width: 100%;
+    margin-bottom: 50px;
+    color: #464749
+}
+
+.learn-more .learn-cont {
+    position: relative;
+    height: 530px;
+    background: #eef2f3
+}
+
+.learn-more img {
+    width: 690px;
+    height: 100%
+}
+
+.learn-more .learn-mes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #464749;
+    margin-left: 100px
+}
+
+.learn-more .learn-mes .learn-pro p {
+    margin-bottom: 10px
+}
+
+.learn-more .learn-mes h1 {
+    font-size: 32px;
+    margin-bottom: 15px
+}
+
+.learn-more .learn-mes p {
+    font-size: 20px
+}
+
+.video-contain,
+.video-contain-village {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    transition: .35s
+}
+
+.video-contain.remove-video,
+.video-contain-village.remove-video {
+    display: none
+}
+
+.video-contain.hide-video,
+.video-contain-village.hide-video {
+    opacity: 0
+}
+
+.video-contain>.close-btn,
+.video-contain-village>.close-btn {
+    width: 32px;
+    height: 32px;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    z-index: 1
+}
+
+.video-contain>.close-btn:hover::before,
+.video-contain>.close-btn:hover::after,
+.video-contain-village>.close-btn:hover::before,
+.video-contain-village>.close-btn:hover::after {
+    background-color: #d3d3d3;
+    cursor: pointer
+}
+
+.video-contain>.close-btn::before,
+.video-contain>.close-btn::after,
+.video-contain-village>.close-btn::before,
+.video-contain-village>.close-btn::after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    transition: .35s;
+    background-color: #666
+}
+
+.video-contain>.close-btn::before,
+.video-contain-village>.close-btn::before {
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.video-contain>.close-btn::after,
+.video-contain-village>.close-btn::after {
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+.video-bg {
+    transition: .35s;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    height: 750px
+}
+
+.bg-grid {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform: translateZ(0)
+}
+
+.index-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: .35s
+}

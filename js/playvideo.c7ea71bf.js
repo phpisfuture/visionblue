@@ -9,7 +9,7 @@
     }
 
     var n = $(".video-contain"), o = $(".video-contain-village"), a = $(".video-contain-safe"),
-        s = $(".video-contain-location");
+        s = $(".video-contain-location"), l = $(".video-contain-location");
     if (n.length) {
         var d = $("body");
         if (2 === n.length) {
