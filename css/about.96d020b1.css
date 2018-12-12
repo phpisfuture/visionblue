@@ -134,24 +134,9 @@ body {
     background: transparent
 }
 
-.billboard .banner-board .banner-pro {
-    width: 1200px;
-    margin: 0 auto;
-    padding-top: 18%;
-    font-size: 32px;
-    color: #292929
-}
-
 .billboard .banner-board .banner-pro h1 {
     margin-bottom: 10px;
     font-weight: bold
-}
-
-.billboard .banner-board .pro-com {
-    padding-top: 8%;
-    width: 1200px;
-    margin: 0 auto;
-    color: #464749
 }
 
 .billboard .banner-board .pro-com h3 {
