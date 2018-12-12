@@ -26,14 +26,6 @@
     font-size: 32px
 }
 
-.base_news {
-    width: 1200px;
-    min-width: 1200px;
-    margin: 0 auto;
-    color: #464749;
-    min-height: calc(100vh - 623px); 
-}
-
 .base_news h3 {
     font-size: 30px;
     margin: 120px 250px 90px 250px

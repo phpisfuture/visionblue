@@ -37,7 +37,7 @@
     min-width: 1200px;
     margin: 0 auto;
     color: #464749;
-    min-height: calc(100vh - 623px); 
+    min-height: calc(100vh - 600px); 
 }
 
 .base_newslist .content {
