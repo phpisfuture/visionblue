@@ -119,26 +119,32 @@
                             </div>
                         </div>
                     </li>
-                    <li><a href="#">核心竞争力</a></li>
-                    <li><a href="#">商业案例</a></li>
+                    <li><a href="./product.html">核心竞争力</a></li>
+                    <li><a href="./case.html">商业案例</a></li>
                     <li class="news">
-                        <a href="javascript:void(0)">
-                            新闻中心
-                            <i class="icon-down"></i>
-                        </a>
-                        <div class="selec-det news-det clearfix">
-                            <div class="selec-con clearfix">
-                                <a class="safe" href="#">企业动态</a>
-                                <a class="loction" href="#">智慧消防</a>
-                            </div>
-                        </div>
+                        <a href="./news.html">新闻中心</a>
                     </li>
                     <li><a href="#">关于我们</a></li>
                     <li><a href="#">咨询</a></li>
                 </ul>
+                <a class="user" href="#">
+                    <span>
+                        <img id="userImg" style="width:20px;margin-top:25px;" src="webfonts/yonghu1.png">
+                    </span>
+                </a>
             </div>
         </div>
     </nav>
+    <script>
+        $('.page-nav').mouseenter(function () {
+            $('#userImg').attr('src', 'webfonts/yonghu.png')
+        })
+        $('.page-nav').mouseleave(function () {
+            setTimeout(function () {
+                $('#userImg').attr('src', 'webfonts/yonghu1.png')
+            }, 1000)
+        })
+    </script>
     <div class="section section-index">
         <div class="partner-platform">
             <div class="billboard sec-con">
@@ -328,11 +334,11 @@
                     </dl>
                     <dl>
                         <dt>核心竞争力</dt>
-                        <dd><a href="#">环保大数据系统</a></dd>
+                        <dd><a href="./product.html">环保大数据系统</a></dd>
                     </dl>
                     <dl>
                         <dt>商业案例</dt>
-                        <dd><a href="#">商业案例</a></dd>
+                        <dd><a href="./case.html">商业案例</a></dd>
                     </dl>
                     <dl>
                         <dt>关于我们</dt>
