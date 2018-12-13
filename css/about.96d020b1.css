@@ -84,13 +84,13 @@ body {
 }
 
 .billboard .billboard-left {
-    width: 50%;
-    height: 100%;
+    width: 40%;
+    height: 655px;
     display: inline-block;
     position: relative;
-    padding-top: 52.69231%;
     background: url("../img/about/banner_left@1x.png") no-repeat top left;
-    background-size: 70%
+    background-size: 70%;
+    margin-top:5%
 }
 
 .billboard .billboard-left .shell {
@@ -106,7 +106,7 @@ body {
     height: 100%;
     display: inline-block;
     position: relative;
-    padding-top: 52.69231%;
+    padding-top: 19.69231%;
     background: url("../img/about/banner_right@1x.png") no-repeat right center;
     background-size: 35%
 }
@@ -206,7 +206,7 @@ body {
     color: #464749;
     font-size: 24px;
     font-weight: bold;
-    padding-top: 100px;
+    padding-top: 70px;
     margin-bottom: 50px
 }
 
@@ -254,11 +254,18 @@ body {
 }
 
 .sec-parterner .parterner-item {
-    width: 220px;
-    height: 275px;
     float: left;
-    margin-top: 20px;
-    margin-right: 10px;
+    width:190px;
+    padding: 5px;
+    background: #ebebeb;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.sec-parterner .parterner-item img {
+    display:block;
+    width:100%;
+    height: auto;
 }
 
 .sec-parterner .honor ul {
