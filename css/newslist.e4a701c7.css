@@ -100,8 +100,9 @@
 }
 
 .base_newslist .content .news_content .describe .sub_title {
+    width:95%;
     height:65px;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 150%
 }
 
