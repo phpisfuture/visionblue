@@ -165,7 +165,7 @@ var data = {
       "once_per_event":true,
       "vtp_nonInteraction":false,
       "vtp_overrideGaSettings":false,
-      "vtp_eventCategory":"底部导航-关于我们",
+      "vtp_eventCategory":"底部导航-发现我们",
       "vtp_trackType":"TRACK_EVENT",
       "vtp_gaSettings":["macro",2],
       "vtp_eventAction":["macro",4],
