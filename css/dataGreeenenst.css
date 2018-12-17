@@ -471,6 +471,7 @@
     width: 100%;
     height: 100%;
     z-index: 1;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADAQMAAABs5if8AAAABlBMVEUAAAAAAAClZ7nPAAAAAXRSTlNNSIvlSwAAAAxJREFUCNdjaGAAAgAChgCB/5LsuQAAAABJRU5ErkJggg==");
     transform: translateZ(0)
 }
 

@@ -128,7 +128,7 @@
                     <li class="news">
                         <a href="./news.html">新闻中心</a>
                     </li>
-                    <li><a href="./aboutus.html">关于我们</a></li>
+                    <li><a href="./aboutus.html">发现我们</a></li>
                     <li><a href="./product.html#prod_order">咨询</a></li>
                 </ul>
                 <a class="user" href="./login.html">
@@ -154,10 +154,14 @@
             <div class="billboard sec-con">
                 <div class="bg-grid"></div>
                 <img class="index-bg" src="img/index/vbg.jpg">
-                <video class="video-bg" id="vid" loop muted autoplay>
+                <video class="video-bg" id="vid" muted loop>
                     <!-- <source src="//resource.sensoro.com/official/homepage3.webm" type="video/webm"> -->
                     <source src="img/index/homebg.mp4" type="video/mp4">
                 </video><!--  临时背景图-->
+                <script>
+                    var video= document.getElementById('vid');
+                    video.playbackRate = 0.5;
+                </script>
                 <!-- img.banner-bg(src='img/index/banner@2x.jpg') -->
                 <div class="billboard-con">
                     <div class="inner">
@@ -346,8 +350,8 @@
                         <dd><a href="./case.html">商业案例</a></dd>
                     </dl>
                     <dl>
-                        <dt>关于我们</dt>
-                        <dd><a href="./aboutus.html">关于我们</a></dd>
+                        <dt>发现我们</dt>
+                        <dd><a href="./aboutus.html">发现我们</a></dd>
                         <dd><a href="./news.html">新闻中心</a></dd>
                         <dd><a href="./product.html#prod_order">加入我们</a></dd>
                     </dl>
