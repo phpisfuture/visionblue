@@ -732,9 +732,9 @@ body.hide-scroll-bar {
     background-position: center
 }
 
-.play-video:hover {
+/* .play-video:hover {
     box-shadow: 0 2px 12px 0 #000
-}
+} */
 
 .play-btn {
     width: 28px;
@@ -880,7 +880,7 @@ body.hide-scroll-bar {
 .platform .safe-intell a:hover {
     width: 100%;
     height: 100%;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1)
+    /* box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1) */
 }
 
 .platform .cont-safe-left a:hover img,
