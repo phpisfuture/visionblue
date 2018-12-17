@@ -17,6 +17,7 @@
     <link href="css/common.0ab349fb.css" rel="stylesheet">
     <script src="lib/jquery.min.js"></script>
     <script src="lib/modernizr-custom.js"></script>
+    <script src="lib/vue.min.js"></script>
     <script>
         var _hmt = _hmt || [];
         (function () {
@@ -67,69 +68,17 @@
         <h3>企业动态</h3>
     </div>
     <section class="base_newslist">
-        <div class="content">
+        <div class="content" id="app">
             <table id="pageTotal">
                 <tbody>
-                    <tr class="news_content" style="display: block;">
+                    <tr class="news_content" style="display: block;" v-for="item of newsData" :key="item.id">
                         <td>
-                            <a href="./newInfo.html" target="_blank">
-                                <img src="./img/news/news1.png">
+                            <a :href="'./newInfo.html?id=' + item.id" target="_blank">
+                                <img :src="item.imgURL">
                                 <div class="describe">
-                                    <div class="sub_title">彩渱高科联合环保局、北城街道办废水零直排工作推进会</div>
-                                    <div class="news_date">2018年11月10日
-                                        <span class="newsStick">置顶</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class="news_content" style="display: block;">
-                        <td>
-                            <a href="./newInfo.html" target="_blank">
-                                <img src="./img/news/news2.png">
-                                <div class="describe">
-                                    <div class="sub_title">久吾高科(300631)宣布入股浙江绿保</div>
-                                    <div class="news_date">2018 年 8 月 20 日
-                                        <span class="newsStick">置顶</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class="news_content" style="display: block;">
-                        <td>
-                            <a href="./newInfo.html" target="_blank">
-                                <img src="./img/news/news3.png">
-                                <div class="describe">
-                                    <div class="sub_title">环保部臧文超女士莅临彩渱高科指导</div>
-                                    <div class="news_date">2018 年 11 月 21 日
-                                        <span class="newsStick" style="display: none;"></span>
-                                    </div>
-                                </div>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class="news_content" style="display: block;">
-                        <td>
-                            <a href="./newInfo.html" target="_blank">
-                                <img src="./img/news/news4.png">
-                                <div class="describe">
-                                    <div class="sub_title">这家工厂，把捡垃圾捡成了世界级的存在!</div>
-                                    <div class="news_date">2018年12月08日
-                                        <span class="newsStick" style="display: none;"></span>
-                                    </div>
-                                </div>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class="news_content" style="display: block;">
-                        <td>
-                            <a href="./newInfo.html" target="_blank">
-                                <img src="./img/news/news5.png">
-                                <div class="describe">
-                                    <div class="sub_title">中小学生暑期环保公益行之彩渱高科</div>
-                                    <div class="news_date">2018年12月08日
-                                        <span class="newsStick" style="display: none;"></span>
+                                    <div class="sub_title">{{ item.subTitle }}</div>
+                                    <div class="news_date">{{ item.newsDate }}
+                                        <span v-show="item.stickType" class="newsStick">置顶</span>
                                     </div>
                                 </div>
                             </a>
@@ -235,6 +184,51 @@
     <!--  }-->
     <!--  gtag('js', new Date());-->
     <!--  gtag('config', 'UA-99737932-1');-->
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                newsData: [
+                    {
+                        id: 0001,
+                        imgURL: './img/news/news1.png',
+                        subTitle: '彩渱高科联合环保局、北城街道办废水零直排工作推进会',
+                        newsDate: '2018年11月10日',
+                        stickType: true
+                    },
+                    {
+                        id: 0002,
+                        imgURL: './img/news/news2.png',
+                        subTitle: '久吾高科(300631)宣布入股浙江绿保',
+                        newsDate: '2018年08月20日',
+                        stickType: true
+                    },
+                    {
+                        id: 0003,
+                        imgURL: './img/news/news3.png',
+                        subTitle: '环保部臧文超女士莅临彩渱高科指导',
+                        newsDate: '2018年11月21日',
+                        stickType: false
+                    },
+                    {
+                        id: 0004,
+                        imgURL: './img/news/news4.png',
+                        subTitle: '这家工厂，把捡垃圾捡成了世界级的存在!',
+                        newsDate: '2018年12月08日',
+                        stickType: false
+                    },
+                    {
+                        id: 0005,
+                        imgURL: './img/news/news5.png',
+                        subTitle: '中小学生暑期环保公益行之彩渱高科',
+                        newsDate: '2018年12月08日',
+                        stickType: false
+                    }
+                ]
+            }
+        });
+    </script>
 </body>
 
 </html>
