@@ -573,7 +573,7 @@ body.hide-scroll-bar {
     min-height: 100%;
     object-fit: cover;
     height: 750px;
-    z-index: -9999;
+    /* z-index: -9999; */
 }
 
 .billboard {
