@@ -38,7 +38,7 @@ body {
 
 .layout {
     width: 100%;
-    background: #fff
+    /* background: #fff */
 }
 
 @media screen and (min-width: 1300px) {
@@ -50,16 +50,17 @@ body {
 
 .billboard-left {
     width: 50%;
-    height: 100%;
+    height: 900px;
     background: url("../img/about/banner_left@1x.png") no-repeat top left;
     background-size: 100%
 }
 
 .billboard-right {
     width: 50%;
-    height: 100%;
+    height: 900px;
     background: url("../img/about/banner_right@1x.png") no-repeat center;
-    background-size: 100%
+    background-size: 100%;
+    margin-top: 340px;
 }
 
 .content-wrap {
@@ -85,7 +86,7 @@ body {
 
 .billboard .billboard-left {
     width: 40%;
-    height: 655px;
+    height: 936px;
     display: inline-block;
     position: relative;
     background: url("../img/about/banner_left@1x.png") no-repeat top left;
@@ -103,7 +104,7 @@ body {
 
 .billboard .billboard-right {
     width: 50%;
-    height: 100%;
+    height: 900px;
     display: inline-block;
     position: relative;
     padding-top: 19.69231%;
