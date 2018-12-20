@@ -30,7 +30,6 @@
     <!--[if lte IE 8]>
     <script src="js/ie6-warning.621f8fb1.js"></script><![endif]-->
     <style>
-
         @media only screen and (max-width: 1920px) {
             .base_news {
                 width: 1200px;
@@ -57,9 +56,11 @@
                         <a href="javascript:void(0)">服务与解决方案<i class="icon-down"></i></a>
                         <div class="selec-det resolve-det clearfix">
                             <div class="selec-con clearfix">
-                                <a class="safe" href="./dataGreenest.html">数据环保的传播与践行者</a>
-                                <a class="loction" href="./greenestBlueprint.html">中国环保的蓝图与愿景</a>
-                                <a class="intelligent" href="./greenGreenest.html">绿色环保的先行与捍卫者</a>
+                                <a href="./industry.html#machinery">机械行业一体化</a>
+                                <a href="./industry.html#autoRepair">汽修行业一体化</a>
+                                <a href="./industry.html#medical">医疗行业一体化</a>
+                                <a href="./industry.html#poisonBurst">易毒易爆一体化</a>
+                                <a href="./industry.html#plastic">塑料行业一体化</a>
                             </div>
                         </div>
                     </li>
@@ -107,7 +108,7 @@
                 <img :src="item.imgURL">
                 <p style="text-align: center">{{ item.imgInfo }}</p>
             </div>
-            
+
         </div>
     </section>
     <div class="footer">
@@ -116,9 +117,11 @@
                 <div class="left clearfix">
                     <dl>
                         <dt>服务与解决方案</dt>
-                        <dd><a href="./dataGreenest.html">中国环保的蓝图与愿景</a></dd>
-                        <dd><a href="./greenestBlueprint.html">数据环保的传播与践行者</a></dd>
-                        <dd><a href="./greenGreenest.html">绿色环保的先行与捍卫者</a></dd>
+                        <dd><a href="./industry.html#machinery">机械行业一体化</a></dd>
+                        <dd><a href="./industry.html#autoRepair">汽修行业一体化</a></dd>
+                        <dd><a href="./industry.html#medical">医疗行业一体化</a></dd>
+                        <dd><a href="./industry.html#poisonBurst">易毒易爆一体化</a></dd>
+                        <dd><a href="./industry.html#plastic">塑料行业一体化</a></dd>
                     </dl>
                     <dl>
                         <dt>核心竞争力</dt>
@@ -206,21 +209,20 @@
                             废行业发挥的地位作用；并就后期与我司设备、模式等项目的战略合作进行
                             了初步商讨。会后，李总表示会尽快安排集团公司领导与我司进行更深入的
                             沟通交流，争取早日达成战略伙伴计划。`,
-                    imgs: [
-                        {
-                            imgURL:'./img/news/newsInfo1.png',
+                    imgs: [{
+                            imgURL: './img/news/newsInfo1.png',
                             imgInfo: '(参观我司自主研发的汽修一体机)'
                         },
                         {
-                            imgURL:'./img/news/newsInfo2.png',
+                            imgURL: './img/news/newsInfo2.png',
                             imgInfo: '(参观危废处置展示台)'
                         },
                         {
-                            imgURL:'./img/news/newsInfo3.png',
+                            imgURL: './img/news/newsInfo3.png',
                             imgInfo: '(两司高层交流学习“天网云仓”系统)'
                         },
                         {
-                            imgURL:'./img/news/newsInfo3.png',
+                            imgURL: './img/news/newsInfo3.png',
                             imgInfo: '(两司高层商讨战略合作计划)'
                         }
                     ]
@@ -233,7 +235,7 @@
                     if (url.indexOf("?") != -1) {
                         var str = url.substr(1);
                         strs = str.split("&");
-                        for(var i = 0; i < strs.length; i ++) {
+                        for (var i = 0; i < strs.length; i++) {
                             theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
                         }
                     }
