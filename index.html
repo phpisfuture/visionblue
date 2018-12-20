@@ -161,7 +161,7 @@
             }, 1000)
         })
     </script>
-    <div class="section section-index">
+    <div class="section section-index" id="app">
         <div class="partner-platform">
             <div class="billboard sec-con">
                 <div class="bg-grid"></div>
@@ -453,6 +453,31 @@
         }
     </script>
     <script src="./js/noIe.js"></script>
+    <script src="./lib/vue.min.js"></script>
+    <script src="./config.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                api: api + '/api/index/index'
+            },
+            mounted: function () {
+                var that = this;
+                $.ajax({
+                    url: that.api,
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {},
+                    success: function (data) {
+                        console.log(data);
+                    },
+                    error: function () {
+                        console.log('error');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
