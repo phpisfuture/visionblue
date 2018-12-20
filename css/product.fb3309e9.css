@@ -203,21 +203,25 @@ body {
     width: 100%;
     display: -ms-flexbox;
     display: flex;
-    background: #EBEEEF;
     margin-bottom: 50px;
     color: #464749;
     padding-top:50px;
     padding-bottom:50px;
 }
 
+.pro-SWC img {
+    margin: auto;
+}
+
 .pro-SWC .swc {
-    width: 55%;
+    width: 40%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
     align-items: center;
     -ms-grid-column-align: center;
-    justify-items: center
+    justify-items: center;
+    margin: auto;
 }
 
 .pro-SWC .swc .swc-name {
@@ -225,8 +229,24 @@ body {
 }
 
 .pro-SWC .swc .swc-name h1 {
-    font-size: 28px;
-    line-height: 34px
+    font-size: 48px;
+    line-height: 58px
+}
+
+.pro-SWC .swc .swc-name > p,
+.pro-SWC .swc .swc-name > div > p {
+    width: 90%;
+    font-size: 18px;
+    line-height: 26px;
+    
+}
+
+.pro-SWC .swc .swc-name > p {
+    margin-top: 10px;
+}
+
+.pro-SWC .swc .swc-name > div {
+    margin-top:15px;
 }
 
 .pro-SWC .swc .swc-name .swc-pro {

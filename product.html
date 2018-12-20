@@ -75,7 +75,17 @@
                             </div>
                         </div>
                     </li>
-                    <li><a href="./product.html">核心竞争力</a></li>
+                    <li class="resolve">
+                        <a href="javascript:void(0)">核心竞争力<i class="icon-down"></i></a>
+                        <div class="selec-det resolve-det clearfix" style="width: 104px;">
+                            <div class="selec-con clearfix">
+                                <a href="#wasteOil">一体化</a>
+                                <a href="#dataAnalysis">数据化</a>
+                                <a href="#catalyst">协同化</a>
+                                <a href="#artFactory">艺术化</a>
+                            </div>
+                        </div>
+                    </li>
                     <li><a href="./case.html">商业案例</a></li>
                     <li class="news">
                         <a href="./news.html">新闻中心</a>
@@ -109,55 +119,51 @@
     </div>
     <!--=======content=====-->
     <div class="pro-layout">
-        <div class="platform sec-con center">
-            <div class="cont-safe-left">
-                <img style="margin-top:-30px;margin:0 auto" src="img/product/yuncangshuliang.png" alt="">
-                <div class="safe-desc">
-                    <h1>100,000<span>+</span></h1>
-                    <p>物联网智能云仓数量</p>
-                </div>
-            </div>
-            <div class="cont-safe-right">
-                <div class="safe-locat">
-                    <img src="img/product/wurenhuagongchang.jpg" alt="">
-                    <div class="safe-desc1">
-                        <div class="pro-station">
-                            <!--i.icon-a-->
-                            <h1>无人化处置工厂</h1>
-                            <p>处置成本是同行1/20</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="safe-intell">
-                    <img src="img/product/dianshang.png" alt="">
-                    <div class="safe-desc1" style="width: 35%;top:35%">
-                        <div class="pro-station">
-                            <h1 style="font-size: 36px;color:#202020;text-align: right">强大的</h1>
-                            <h1 style="font-size: 36px;color:#202020;text-align: right;margin-top: 10px;">原料电商</h1>
-                            <p style="font-size: 18px;color:#202020; margin-top:20px;">原料价格普遍低于8折</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="pro-SWC">
-            <img src="img/product/tuandui.jpg">
+        <div class="pro-SWC" id="wasteOil">
+            <img src="img/product/waste_oil.png">
             <div class="swc">
                 <div class="swc-name">
                     <!--i(_src='img/product/α@2x.png')-->
-                    <h1>核心团队</h1>
+                    <h1>废油装置小型化</h1>
+                    <p>产品具有自动预警、火灾监控等功能，符合环境保护和人类健康的要求，对生态环境无害，资源利用率极高</p>
                 </div>
             </div>
         </div>
-        <div class="pro-SWC" style="padding:0">
+        <div class="pro-SWC" style="padding:0" id="dataAnalysis">
             <div class="swc">
                 <div class="swc-name">
                     <!--i(_src='img/product/α@2x.png')-->
-                    <h1>强大的数据挖掘</h1>
-                    <h1>和分析能力</h1>
+                    <h1>数据分析能力</h1>
+                    <h1>数据挖掘能力</h1>
+                    <div>
+                        <p>数据分析能力</p>
+                        <p>发掘能</p>
+                        <p>及时性</p>
+                        <p>准确性</p>
+                    </div>
                 </div>
             </div>
-            <img src="img/product/shujuzhongxin.jpg">
+            <img src="img/product/data_analysis.png">
+        </div>
+        <div class="pro-SWC" id="catalyst">
+            <img src="img/product/catalyst.png">
+            <div class="swc">
+                <div class="swc-name">
+                    <!--i(_src='img/product/α@2x.png')-->
+                    <h1 style="font-size: 48px;">催化剂技术</h1>
+                    <h1 style="font-size: 48px;margin-top:25px;">膜分离技术</h1>
+                </div>
+            </div>
+        </div>
+        <div class="pro-SWC" id="artFactory">
+            <div class="swc">
+                <div class="swc-name">
+                    <!--i(_src='img/product/α@2x.png')-->
+                    <h1>当危废工厂</h1>
+                    <h1>碰撞建筑艺术</h1>
+                </div>
+            </div>
+            <img src="img/product/art_factory.png">
         </div>
     </div>
     <div class="connection-lay">
@@ -856,7 +862,10 @@
                     </dl>
                     <dl>
                         <dt>核心竞争力</dt>
-                        <dd><a href="./product.html">环保大数据系统</a></dd>
+                        <dd><a href="#wasteOil">一体化</a></dd>
+                        <dd><a href="#dataAnalysis">数据化</a></dd>
+                        <dd><a href="#catalyst">协同化</a></dd>
+                        <dd><a href="#artFactory">艺术化</a></dd>
                     </dl>
                     <dl>
                         <dt>商业案例</dt>
@@ -913,6 +922,12 @@
             </div>
         </div>
     </footer>
+    <script>
+        $("a").click(function () {
+          $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top}, 400);
+          return false;//不要这句会有点卡顿
+        });
+    </script>
     <script src="js/common.c173e257.js"></script><!-- Global site tag (gtag.js) - Google Analytics-->
     <!--script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-99737932-1')-->
     <!--script.-->
