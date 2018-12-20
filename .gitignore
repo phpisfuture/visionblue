@@ -12,3 +12,4 @@
 .settings/*
 .idea/
 .DS_Store
+config.js
