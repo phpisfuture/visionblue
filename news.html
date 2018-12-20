@@ -83,14 +83,14 @@
         <div class="content" id="app">
             <table id="pageTotal">
                 <tbody>
-                    <tr class="news_content" style="display: block;" v-for="item of newsData" :key="item.id">
+                    <tr class="news_content" style="display: block;" v-for="item of newsData" :key="item.news_id">
                         <td>
-                            <a :href="'./newInfo.html?id=' + item.id" target="_blank">
-                                <img :src="item.imgURL">
+                            <a :href="'./newInfo.html?id=' + item.news_id" target="_blank">
+                                <img :src="item.pic_url">
                                 <div class="describe">
-                                    <div class="sub_title">{{ item.subTitle }}</div>
-                                    <div class="news_date">{{ item.newsDate }}
-                                        <span v-show="item.stickType" class="newsStick">置顶</span>
+                                    <div class="sub_title">{{ item.title }}</div>
+                                    <div class="news_date">{{ item.create_time }}
+                                        <span v-show="item.is_top === 1" class="newsStick">置顶</span>
                                     </div>
                                 </div>
                             </a>
@@ -201,54 +201,31 @@
     <!--  }-->
     <!--  gtag('js', new Date());-->
     <!--  gtag('config', 'UA-99737932-1');-->
-
+    <script src="config.js"></script>
     <script>
         new Vue({
             el: '#app',
             data: {
-                newsData: [{
-                        id: 0001,
-                        imgURL: './img/news/news1.png',
-                        subTitle: '彩渱高科联合环保局、北城街道办废水零直排工作推进会',
-                        newsDate: '2018年11月10日',
-                        stickType: true
+                api: api + '/api/news/getList',
+                newsData: []
+            },
+            mounted: function () {
+                var that = this;
+                $.ajax({
+                    url: that.api,
+                    type: 'GET',
+                    dataType: 'json',
+                    data: {
+                        size: 9,
+                        page: 1
                     },
-                    {
-                        id: 0002,
-                        imgURL: './img/news/news2.png',
-                        subTitle: '久吾高科(300631)宣布入股浙江绿保',
-                        newsDate: '2018年08月20日',
-                        stickType: true
+                    success: function (data) {
+                        that.newsData = data.data.data
                     },
-                    {
-                        id: 0003,
-                        imgURL: './img/news/news3.png',
-                        subTitle: '环保部臧文超女士莅临彩渱高科指导',
-                        newsDate: '2018年11月21日',
-                        stickType: false
-                    },
-                    {
-                        id: 0004,
-                        imgURL: './img/news/news4.png',
-                        subTitle: '这家工厂，把捡垃圾捡成了世界级的存在!',
-                        newsDate: '2018年12月08日',
-                        stickType: false
-                    },
-                    {
-                        id: 0005,
-                        imgURL: './img/news/news5.png',
-                        subTitle: '中小学生暑期环保公益行之彩渱高科',
-                        newsDate: '2018年12月08日',
-                        stickType: false
-                    },
-                    {
-                        id: 0006,
-                        imgURL: './img/news/news6.png',
-                        subTitle: '中再云公司来我司参观交流',
-                        newsDate: '2018年12月03日',
-                        stickType: false
+                    error: function () {
+                        console.log('error')
                     }
-                ]
+                });
             }
         });
     </script>

@@ -94,31 +94,10 @@
         <h3>媒体新闻</h3>
     </div>
     <section class="base_news" id="app">
-        <div v-if="id != 6" class="content" id="newsContent">
-            <h3>新闻内容标题新闻内容标题新闻内容标题新闻内容标题新闻内容标题</h3>
-            <p class="news_date">2018年12月08日</p>
-            <p>新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容</p>
-            <p>新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容</p>
-            <img src="./img/news/news1.png">
-            <p class="img_title">
-                视频：<a href="https://v.qq.com/x/page/r0645z8iv7w.html">https://v.qq.com/x/page/r0645z8iv7w.html</a>
-            </p>
-            <p>
-                新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容
-            </p>
-            <p>
-                新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容新闻正文内容
-            </p>
-        </div>
-        <div v-else class="content" id="newsContent">
+        <div class="content" id="newsContent">
             <h3>{{ newsInfo.title }}</h3>
-            <p class="news_date">{{ newsInfo.date }}</p>
-            <p>{{ newsInfo.info }}</p>
-            <div v-for="(item,index) of newsInfo.imgs" :key="index">
-                <img :src="item.imgURL">
-                <p style="text-align: center">{{ item.imgInfo }}</p>
-            </div>
-
+            <p class="news_date">{{ newsInfo.update_time }}</p>
+            <div v-html="newsInfo.content"></div>
         </div>
     </section>
     <div class="footer">
@@ -204,42 +183,16 @@
     <!--  }-->
     <!--  gtag('js', new Date());-->
     <!--  gtag('config', 'UA-99737932-1');-->
+    <script src="config.js"></script>
     <script src="./js/noIe.js"></script>
     <script src="lib/vue.min.js"></script>
     <script>
         new Vue({
             el: '#app',
             data: {
+                api: api + '/api/news/detail',
                 id: 0,
-                newsInfo: {
-                    title: '中再云公司来我司参观交流',
-                    date: '2018年12月03日',
-                    info: ` 2018年12月3日，中国再生资源开发有限公司旗下控股企业-中再云图科技
-                            有限公司总经理李总等一行七人来公司参观，交流。会前，李总等人参观了
-                            我司自主研发的智能云仓、汽修一体机、废油再生装置等设备，沟通危废处
-                            置的过程与传统模式的不同之处。会中，李总与我司高层交流了天网云仓系
-                            统的研发情况，应用优势；整个行业的发展前景以及未来大数据信息化在危
-                            废行业发挥的地位作用；并就后期与我司设备、模式等项目的战略合作进行
-                            了初步商讨。会后，李总表示会尽快安排集团公司领导与我司进行更深入的
-                            沟通交流，争取早日达成战略伙伴计划。`,
-                    imgs: [{
-                            imgURL: './img/news/newsInfo1.png',
-                            imgInfo: '(参观我司自主研发的汽修一体机)'
-                        },
-                        {
-                            imgURL: './img/news/newsInfo2.png',
-                            imgInfo: '(参观危废处置展示台)'
-                        },
-                        {
-                            imgURL: './img/news/newsInfo3.png',
-                            imgInfo: '(两司高层交流学习“天网云仓”系统)'
-                        },
-                        {
-                            imgURL: './img/news/newsInfo3.png',
-                            imgInfo: '(两司高层商讨战略合作计划)'
-                        }
-                    ]
-                }
+                newsInfo: {}
             },
             methods: {
                 getURL: function () {
@@ -253,10 +206,29 @@
                         }
                     }
                     return this.id = theRequest.id
+                },
+                getAjaxData: function () {
+                    var that = this;
+                    $.ajax({
+                        url: that.api,
+                        type: 'POST',
+                        dataType: 'json',
+                        data: {
+                            news_id: that.id
+                        },
+                        success: function (data) {
+                            var _data = data.data;
+                            that.newsInfo = _data;
+                        },
+                        error: function () {
+                            console.log('error')
+                        }
+                    });
                 }
             },
             mounted: function () {
-                this.getURL()
+                this.getURL();
+                this.getAjaxData();
             }
         });
     </script>

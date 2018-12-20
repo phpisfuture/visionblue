@@ -127,7 +127,7 @@
                     </li>
                     <li class="resolve">
                         <a href="javascript:void(0)">服务与解决方案<i class="icon-down"></i></a>
-                        <div class="selec-det resolve-det clearfix" >
+                        <div class="selec-det resolve-det clearfix">
                             <div class="selec-con clearfix">
                                 <a href="./product.html#wasteOil">一体化</a>
                                 <a href="./product.html#dataAnalysis">数据化</a>
@@ -187,155 +187,86 @@
             </div>
         </div>
     </div>
-    <div class="case-info" id="app">
-        <div class="desc-wrap">
-            <div class="main-info">
-                <h4 class="case-subTitle">彩渱高科</h4>
-                <h3 class="case-title">我们的梦想就是中国环保的未来</h3>
-                <p class="case-desc">由行业资深运营团队、海内外环境工程科学家、机电一体化以及信息化专家联合组建，
-                    从事城市可再生资源与城市数据信息“开发、处理 、经营”的环保大数据公司
-                </p>
-            </div>
-            <div class="sub-info">
-                <span class="count-number" style="font-size: 48px;display:block;margin-bottom: 15px;">两个平台</span>
-                <span class="count-number" style="font-size: 48px;display:block;">三个子公司</span>
-                <!-- <p class="detail-desc">
-                    介绍内容介绍内容介绍内容介绍内容
-                    介绍内容介绍内容介绍内容介绍内容
-                    介绍内容介绍内容
-                </p> -->
+    <div id="app">
+        <div class="case-info">
+            <div class="desc-wrap">
+                <div class="main-info">
+                    <h4 class="case-subTitle">{{ threeDataList.title_one }}</h4>
+                    <h3 class="case-title">{{ threeDataList.title_two }}</h3>
+                    <p class="case-desc">{{ threeDataList.title_three }}</p>
+                </div>
+                <div class="sub-info">
+                    <span class="count-number" style="font-size: 48px;display:block;margin-bottom: 15px;">{{
+                        threeDataList.desc_one }}</span>
+                    <span class="count-number" style="font-size: 48px;display:block;">{{ threeDataList.desc_two }}</span>
+                    <!-- <p class="detail-desc">
+                        介绍内容介绍内容介绍内容介绍内容
+                        介绍内容介绍内容介绍内容介绍内容
+                        介绍内容介绍内容
+                    </p> -->
+                </div>
             </div>
         </div>
-    </div>
-    <div class="response-layout">
-        <div class="platform sec-con center">
-            <div class="cont-safe-left" style="width:40%">
-                <a href="javascript:void(0)">
-                    <img src="img/index/shujuhuanbao.jpg" alt="" style="width: auto">
-                    <!-- <div class="safe-desc">
-                        <h1>数据环保的传播与践行者</h1>
-                    </div> -->
-                </a>
-            </div>
-            <div class="cont-safe-right" style="width: 60%">
-                <div class="safe-locat">
+        <div class="response-layout">
+            <div class="platform sec-con center">
+                <div class="cont-safe-left" style="width:40%">
                     <a href="javascript:void(0)">
-                        <img src="img/index/zhongguohuanbao.jpg" alt="" style="width: auto;margin-left: 30px;">
+                        <img :src="threeImgList[0]" alt="" style="width: auto">
                         <!-- <div class="safe-desc">
-                            <h1>中国环保的蓝图与愿景</h1>
+                            <h1>数据环保的传播与践行者</h1>
                         </div> -->
                     </a>
                 </div>
-                <div class="safe-intell">
-                    <a href="javascript:void(0)">
-                        <img src="img/index/lvsehuanbao.jpg" alt="" style="width: auto;margin-left: 30px;">
-                        <!-- <div class="safe-desc">
-                            <h1>绿色环保的先行与捍卫者</h1>
-                        </div> -->
-                    </a>
+                <div class="cont-safe-right" style="width: 60%">
+                    <div class="safe-locat">
+                        <a href="javascript:void(0)">
+                            <img :src="threeImgList[1]" alt="" style="width: auto;margin-left: 30px;">
+                            <!-- <div class="safe-desc">
+                                <h1>中国环保的蓝图与愿景</h1>
+                            </div> -->
+                        </a>
+                    </div>
+                    <div class="safe-intell">
+                        <a href="javascript:void(0)">
+                            <img :src="threeImgList[2]" alt="" style="width: auto;margin-left: 30px;">
+                            <!-- <div class="safe-desc">
+                                <h1>绿色环保的先行与捍卫者</h1>
+                            </div> -->
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="case-info" style="padding-top:40px;margin-bottom:130px;">
-            <div class="desc-wrap">
-                <div class="main-info">
-                    <h4 class="case-subTitle">彩渱·浙江斓云</h4>
-                    <h3 class="case-title">环保大数据形成的固废系统-线上天网</h3>
-                    <p class="case-desc">凭借线下成千上万环保物联网设备的铺设,传输回来各产废端完整的环保大数据系统,在此基础上，
-                        浙江斓云正在构建的是一套完整的危废数据处理生态系统。这套生态的核心是价值转化,在大数据
-                        基础之上,已经开始了原料电商平台和供应链金融的价值转化
-                    </p>
-                </div>
-                <div class="sub-info">
-                    <span class="count-number">1亿</span>
-                    <span class="count-unit"></span>
-                    <p class="detail-desc">
-                        线上即将形成上亿个产废数据,通过数据挖掘和数据分析,为银行、小额贷等金融机构提供数据支持，已形成润滑油、乳化液、塑料原料等原料电商的强大销售体系。
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="station sec-con anchor">
-            <div class="station-con clearfix">
-                <a class="station-grid" href="#">
-                    <img class="installed-station" src="img/index/zhihuichengshi.jpg">
-                    <div class="desc-con" style="left:100px">
-                        <div class="center">
-                            <div class="desc">
-                                <h1>智慧城市“末端”云管理平台</h1>
-                            </div>
+            <template v-for="item of oneImgList">
+                <div class="case-info" style="padding-top:40px;margin-bottom:130px;">
+                    <div class="desc-wrap">
+                        <div class="main-info">
+                            <h4 class="case-subTitle">{{ item.title_one }}</h4>
+                            <h3 class="case-title">{{ item.title_two }}</h3>
+                            <p class="case-desc">{{ item.title_three }}</p>
+                        </div>
+                        <div class="sub-info">
+                            <span class="count-number">{{ item.desc_one }}</span>
+                            <span class="count-unit"></span>
+                            <p class="detail-desc">{{ item.desc_two }}</p>
                         </div>
                     </div>
-                </a>
-            </div>
-        </div>
-        <div class="case-info" style="padding-top:40px;margin-bottom:130px;">
-            <div class="desc-wrap">
-                <div class="main-info">
-                    <h4 class="case-subTitle">彩渱·浙江蓝景</h4>
-                    <h3 class="case-title">环保物联网设备形成危废收集能力-线下地网</h3>
-                    <p class="case-desc">
-                        花费3年时间投入上亿元研制针对产危废垃圾各行业的物联网设备智能云仓,主要包括机械、汽修、医疗、塑料制造、易制毒等行业,凭借低价格、易部署的优势快速完成对数万产废企业的铺设,成为业内标杆案例。
-                    </p>
                 </div>
-                <div class="sub-info">
-                    <span class="count-number">100万</span>
-                    <span class="count-unit"></span>
-                    <p class="detail-desc">
-                        国内率先落地的危废垃圾行业解决方案,已经在浙江成功铺设数万台云仓,预计两年内铺设上百万台。据统计,单浙江省的产废企业超过200万家，全国数字更是惊人,铺设潜力巨大。
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="station sec-con anchor">
-            <div class="station-con clearfix">
-                <a class="station-grid" href="#">
-                    <img class="installed-station" src="img/index/xiaoweiqiye.jpg">
-                    <div class="desc-con" style="right:100px">
-                        <div class="center">
-                            <div class="desc">
-                                <h1>小微企业供应链云管理平台</h1>
+                <div class="station sec-con anchor">
+                    <div class="station-con clearfix">
+                        <a class="station-grid" href="#">
+                            <img class="installed-station" :src="item.pic_url[0]">
+                            <div class="desc-con" style="left:100px">
+                                <div class="center">
+                                    <div class="desc">
+                                        <h1>智慧城市“末端”云管理平台</h1>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-        </div>
-        <div class="case-info" style="padding-top:40px;margin-bottom:130px;">
-            <div class="desc-wrap">
-                <div class="main-info">
-                    <h4 class="case-subTitle">彩渱·绿保</h4>
-                    <h3 class="case-title">智慧型无人工厂--后端处置</h3>
-                    <p class="case-desc">
-                        利用膜处理分离后的废弃物静脉协同处置技术,可处置废矿物油、废乳化液、废塑料等多种危废。
-                        利用线上天网，线下地网链接固废产生端——收集端——输运端——处置端，重塑固废处置价
-                        值链。
-                    </p>
                 </div>
-                <div class="sub-info">
-                    <span class="count-number">14年</span>
-                    <span class="count-unit"></span>
-                    <p class="detail-desc">
-                        14年处置技术的积累,通过静脉协同处置技术，为危险废物“资源化、减量化、无害化”处置提供坚实保障。
-                    </p>
-                </div>
-            </div>
+            </template>
         </div>
-        <div class="station sec-con anchor">
-            <div class="station-con clearfix">
-                <a class="station-grid" href="#">
-                    <img class="installed-station" src="img/index/jingmaixietong.jpg">
-                    <div class="desc-con" style="left:100px">
-                        <div class="center">
-                            <div class="desc">
-                                <h1>静脉协同处置</h1>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
     </div>
     <script src="lib/ScrollMagic.min.js"></script>
     <script src="lib/detect.min.js"></script>
@@ -459,17 +390,28 @@
         new Vue({
             el: '#app',
             data: {
-                api: api + '/api/index/index'
+                api: api + '/api/index/index',
+                threeDataList: [],
+                threeImgList: [''],
+                oneImgList: []
             },
             mounted: function () {
                 var that = this;
                 $.ajax({
                     url: that.api,
-                    type: 'POST',
+                    type: 'GET',
                     dataType: 'json',
                     data: {},
                     success: function (data) {
-                        console.log(data);
+                        var _data = data.data.data;
+                        for (var i = 0; i < _data.length; i++) {
+                            if (Array.isArray(_data[i].pic_url[0])) {
+                                that.threeDataList = _data[i];
+                                that.threeImgList = _data[i].pic_url[0];
+                            } else {
+                                that.oneImgList.push(_data[i])
+                            }
+                        }
                     },
                     error: function () {
                         console.log('error');
