@@ -1,9 +1,9 @@
 var api = '';
-var apiConfig = 'development';
+var apiConfig = 'production';
 if(apiConfig == 'development') {
   api = 'http://ladmin.zjchgkj.com'
 }else if (apiConfig == 'test') {
   api = ''
 } else if (apiConfig == 'production') {
-  api = ''
+  api = 'http://admin.zjchgkj.com'
 }
