@@ -230,6 +230,8 @@
                             for (var i = 0; i < data.data.last_page; i++) {
                                 that.pages.push(i + 1)
                             }
+                            $("html, body").animate({scrollTop: 0}, 400);
+                            return false;//不要这句会有点卡顿
                         },
                         error: function () {
                             console.log('error')
