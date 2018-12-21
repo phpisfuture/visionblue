@@ -52,7 +52,7 @@
                     </li>
                     <li class="resolve">
                         <a href="javascript:void(0)">服务与解决方案<i class="icon-down"></i></a>
-                        <div class="selec-det resolve-det clearfix"  >
+                        <div class="selec-det resolve-det clearfix">
                             <div class="selec-con clearfix">
                                 <a href="./product.html#wasteOil">一体化</a>
                                 <a href="./product.html#dataAnalysis">数据化</a>
@@ -98,24 +98,15 @@
                     </tr>
                 </tbody>
             </table>
-            <!-- <div class="page-list">
+            <div class="page-list" v-if="pages != [] && last_page != 1">
                 <span id="barcon">
-                    <a href="javascript:void(0);">&lt;</a>
-                    <a onclick="goPage(1,8)">
-                        <div>1</div>
+                    <a href="javascript:void(0);" @click="lastPage">&lt;</a>
+                    <a href="javascript:void(0)" v-for="item in pages" @click="jumpPage(item)">
+                        <div>{{ item }}</div>
                     </a>
-                    <a onclick="goPage(2,8)">
-                        <div>2</div>
-                    </a>
-                    <a onclick="goPage(3,8)">
-                        <div>3</div>
-                    </a>
-                    <a onclick="goPage(4,8)">
-                        <div>4</div>
-                    </a>
-                    <a href="javascript:void(0);" onclick="goPage(2,8)">&gt;</a>
+                    <a href="javascript:void(0);" @click="nextPage">&gt;</a>
                 </span>
-            </div> -->
+            </div>
         </div>
     </section>
     <div class="footer">
@@ -207,25 +198,57 @@
             el: '#app',
             data: {
                 api: api + '/api/news/getList',
-                newsData: []
+                newsData: [],
+                current_page: 1,
+                last_page: 0,
+                per_page: '',
+                total: '',
+                pages: []
             },
             mounted: function () {
                 var that = this;
-                $.ajax({
-                    url: that.api,
-                    type: 'GET',
-                    dataType: 'json',
-                    data: {
-                        size: 9,
-                        page: 1
-                    },
-                    success: function (data) {
-                        that.newsData = data.data.data
-                    },
-                    error: function () {
-                        console.log('error')
-                    }
-                });
+                this.getDatas(this.current_page)
+            },
+            methods: {
+                getDatas: function (current_page) {
+                    var that = this;
+                    this.pages = [];
+                    $.ajax({
+                        url: that.api,
+                        type: 'GET',
+                        dataType: 'json',
+                        data: {
+                            size: 9,
+                            page: current_page
+                        },
+                        success: function (data) {
+                            that.newsData = data.data.data
+                            that.current_page = data.data.current_page;
+                            that.last_page = data.data.last_page;
+                            that.per_page = data.data.per_page;
+                            that.total = data.data.total;
+                            for (var i = 0; i < data.data.last_page; i++) {
+                                that.pages.push(i + 1)
+                            }
+                        },
+                        error: function () {
+                            console.log('error')
+                        }
+                    });
+                },
+                lastPage:function() {
+                    var that = this;
+                    var current_page = parseInt(that.current_page) -1;
+                    this.getDatas(current_page)
+                },
+                nextPage:function() {
+                    var that = this;
+                    var next_page = parseInt(that.current_page) + 1;
+                    this.getDatas(next_page);
+                },
+                jumpPage:function (pageNumber) {
+                    this.getDatas(pageNumber)
+                }
             }
         });
     </script>
