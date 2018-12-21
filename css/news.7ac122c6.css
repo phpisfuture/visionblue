@@ -43,8 +43,8 @@
 }
 
 .base_news .content img {
-    width: 100%;
-    margin: 0 0 10px
+    display:block;
+    margin: 0 auto;
 }
 
 .base_news .content img.no_mt {
