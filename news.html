@@ -245,6 +245,10 @@
                 },
                 nextPage:function() {
                     var that = this;
+                    var current_page = parseInt(this.current_page);
+                    if (current_page == this.last_page) {
+                        return false;
+                    }
                     var next_page = parseInt(that.current_page) + 1;
                     this.getDatas(next_page);
                 },
