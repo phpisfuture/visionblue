@@ -166,7 +166,7 @@
             <div class="billboard sec-con">
                 <div class="bg-grid"></div>
                 <img class="index-bg" src="img/index/vbg.jpg">
-                <video class="video-bg" id="vid" autoplay muted loop>
+                <video class="video-bg" id="vid" muted>
                     <!-- <source src="//resource.sensoro.com/official/homepage3.webm" type="video/webm"> -->
                     <source src="img/index/homebg.mp4" type="video/mp4">
                 </video><!--  临时背景图-->
@@ -188,29 +188,31 @@
         </div>
     </div>
     <div id="app">
-        <template v-for="item of oneImgList">
-            <div class="case-info" style="padding-top:40px;margin-bottom:130px;">
-                <div class="desc-wrap">
-                    <div class="main-info">
-                        <h4 class="case-subTitle">{{ item.title_one }}</h4>
-                        <h3 class="case-title">{{ item.title_two }}</h3>
-                        <p class="case-desc">{{ item.title_three }}</p>
-                    </div>
-                    <div class="sub-info">
-                        <span class="count-number">{{ item.desc_one }}</span>
-                        <span class="count-unit"></span>
-                        <p class="detail-desc">{{ item.desc_two }}</p>
+        <div class="response-layout">
+            <template v-for="item of oneImgList">
+                <div class="case-info" style="padding-top:40px;margin-bottom:130px;">
+                    <div class="desc-wrap">
+                        <div class="main-info">
+                            <h4 class="case-subTitle">{{ item.title_one }}</h4>
+                            <h3 class="case-title">{{ item.title_two }}</h3>
+                            <p class="case-desc">{{ item.title_three }}</p>
+                        </div>
+                        <div class="sub-info">
+                            <span class="count-number">{{ item.desc_one }}</span>
+                            <span class="count-unit"></span>
+                            <p class="detail-desc">{{ item.desc_two }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="station sec-con anchor">
-                <div class="station-con clearfix">
-                    <a class="station-grid" href="#">
-                        <img class="installed-station" :src="item.pic_url">
-                    </a>
+                <div class="station sec-con anchor">
+                    <div class="station-con clearfix">
+                        <a class="station-grid" href="#">
+                            <img class="installed-station" :src="item.pic_url">
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </template>
+            </template>
+        </div>
     </div>
     <script src="lib/ScrollMagic.min.js"></script>
     <script src="lib/detect.min.js"></script>
