@@ -166,14 +166,11 @@
             <div class="billboard sec-con">
                 <div class="bg-grid"></div>
                 <img class="index-bg" src="img/index/vbg.jpg">
-                <video class="video-bg" id="vid" muted>
+                <video class="video-bg" id="vid" muted preload loop autoplay>
                     <!-- <source src="//resource.sensoro.com/official/homepage3.webm" type="video/webm"> -->
                     <source src="img/index/homebg.mp4" type="video/mp4">
-                </video><!--  临时背景图-->
-                <script>
-                    var video = document.getElementById('vid');
-                    video.playbackRate = 0.5;
-                </script>
+                </video>
+                <!--  临时背景图-->
                 <!-- img.banner-bg(src='img/index/banner@2x.jpg') -->
                 <div class="billboard-con">
                     <div class="inner">
@@ -335,13 +332,6 @@
     </script><!-- - End Google Tag Manager-->
     <!-- - Google Tag Manager (noscript)--><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQHFL4M"
             height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-    <script>
-        window.onload = function () {
-            var video = document.getElementById('vid');
-            video.playbackRate = 0.5;
-        }
-    </script>
     <script src="./js/noIe.js"></script>
     <script src="./lib/vue.min.js"></script>
     <script src="./config.js"></script>
