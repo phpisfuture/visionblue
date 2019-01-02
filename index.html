@@ -188,78 +188,29 @@
         </div>
     </div>
     <div id="app">
-        <div class="case-info">
-            <div class="desc-wrap">
-                <div class="main-info">
-                    <h4 class="case-subTitle">{{ threeDataList.title_one }}</h4>
-                    <h3 class="case-title">{{ threeDataList.title_two }}</h3>
-                    <p class="case-desc">{{ threeDataList.title_three }}</p>
-                </div>
-                <div class="sub-info">
-                    <span class="count-number" style="font-size: 48px;display:block;margin-bottom: 15px;">{{
-                        threeDataList.desc_one }}</span>
-                    <span class="count-number" style="font-size: 48px;display:block;">{{ threeDataList.desc_two }}</span>
-                    <!-- <p class="detail-desc">
-                        介绍内容介绍内容介绍内容介绍内容
-                        介绍内容介绍内容介绍内容介绍内容
-                        介绍内容介绍内容
-                    </p> -->
+        <template v-for="item of oneImgList">
+            <div class="case-info" style="padding-top:40px;margin-bottom:130px;">
+                <div class="desc-wrap">
+                    <div class="main-info">
+                        <h4 class="case-subTitle">{{ item.title_one }}</h4>
+                        <h3 class="case-title">{{ item.title_two }}</h3>
+                        <p class="case-desc">{{ item.title_three }}</p>
+                    </div>
+                    <div class="sub-info">
+                        <span class="count-number">{{ item.desc_one }}</span>
+                        <span class="count-unit"></span>
+                        <p class="detail-desc">{{ item.desc_two }}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="response-layout">
-            <div class="platform sec-con center">
-                <div class="cont-safe-left" style="width:40%">
-                    <a href="javascript:void(0)">
-                        <img :src="threeImgList[0]" alt="" style="width: auto">
-                        <!-- <div class="safe-desc">
-                            <h1>数据环保的传播与践行者</h1>
-                        </div> -->
+            <div class="station sec-con anchor">
+                <div class="station-con clearfix">
+                    <a class="station-grid" href="#">
+                        <img class="installed-station" :src="item.pic_url">
                     </a>
                 </div>
-                <div class="cont-safe-right" style="width: 60%">
-                    <div class="safe-locat">
-                        <a href="javascript:void(0)">
-                            <img :src="threeImgList[1]" alt="" style="width: auto;margin-left: 30px;">
-                            <!-- <div class="safe-desc">
-                                <h1>中国环保的蓝图与愿景</h1>
-                            </div> -->
-                        </a>
-                    </div>
-                    <div class="safe-intell">
-                        <a href="javascript:void(0)">
-                            <img :src="threeImgList[2]" alt="" style="width: auto;margin-left: 30px;">
-                            <!-- <div class="safe-desc">
-                                <h1>绿色环保的先行与捍卫者</h1>
-                            </div> -->
-                        </a>
-                    </div>
-                </div>
             </div>
-            <template v-for="item of oneImgList">
-                <div class="case-info" style="padding-top:40px;margin-bottom:130px;">
-                    <div class="desc-wrap">
-                        <div class="main-info">
-                            <h4 class="case-subTitle">{{ item.title_one }}</h4>
-                            <h3 class="case-title">{{ item.title_two }}</h3>
-                            <p class="case-desc">{{ item.title_three }}</p>
-                        </div>
-                        <div class="sub-info">
-                            <span class="count-number">{{ item.desc_one }}</span>
-                            <span class="count-unit"></span>
-                            <p class="detail-desc">{{ item.desc_two }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="station sec-con anchor">
-                    <div class="station-con clearfix">
-                        <a class="station-grid" href="#">
-                            <img class="installed-station" :src="item.pic_url">
-                        </a>
-                    </div>
-                </div>
-            </template>
-        </div>
+        </template>
     </div>
     <script src="lib/ScrollMagic.min.js"></script>
     <script src="lib/detect.min.js"></script>
