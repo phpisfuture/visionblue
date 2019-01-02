@@ -197,10 +197,19 @@
                             <h3 class="case-title">{{ item.title_two }}</h3>
                             <p class="case-desc">{{ item.title_three }}</p>
                         </div>
-                        <div class="sub-info">
+                        <div class="sub-info" v-if="item.title_one != '彩渱高科'">
                             <span class="count-number">{{ item.desc_one }}</span>
                             <span class="count-unit"></span>
                             <p class="detail-desc">{{ item.desc_two }}</p>
+                        </div>
+                        <div class="sub-info" v-else>
+                            <span class="count-number" style="font-size: 46px;display:block;margin-bottom: 15px;">{{ item.desc_one }}</span>
+                            <span class="count-number" style="font-size: 45px;display:block;">{{ item.desc_two }}</span>
+                            <!-- <p class="detail-desc">
+                                介绍内容介绍内容介绍内容介绍内容
+                                介绍内容介绍内容介绍内容介绍内容
+                                介绍内容介绍内容
+                            </p> -->
                         </div>
                     </div>
                 </div>
