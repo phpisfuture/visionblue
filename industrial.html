@@ -17,7 +17,6 @@
     <link href="css/common.0ab349fb.css" rel="stylesheet">
     <script src="lib/jquery.min.js"></script>
     <script src="lib/modernizr-custom.js"></script>
-    <script src="lib/vue.min.js"></script>
     <script>
         var _hmt = _hmt || [];
         (function () {
@@ -27,9 +26,20 @@
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
-    <link rel="stylesheet" href="css/newslist.e4a701c7.css">
+    <link rel="stylesheet" href="css/news.7ac122c6.css">
     <!--[if lte IE 8]>
     <script src="js/ie6-warning.621f8fb1.js"></script><![endif]-->
+    <style>
+        @media only screen and (max-width: 1920px) {
+            .base_news {
+                width: 1200px;
+                min-width: 1200px;
+                margin: 0 auto;
+                color: #464749;
+                min-height: calc(100vh - 600px);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -52,7 +62,7 @@
                     </li>
                     <li class="resolve">
                         <a href="javascript:void(0)">核心竞争力<i class="icon-down"></i></a>
-                        <div class="selec-det resolve-det clearfix">
+                        <div class="selec-det resolve-det clearfix"  >
                             <div class="selec-con clearfix">
                                 <a href="./product.html#catalyst">机电一体技术</a>
                                 <a href="./product.html#dataAnalysis">数据信息技术</a>
@@ -77,35 +87,15 @@
         </div>
     </nav>
     <div class="news-title">
-        <h3>企业动态</h3>
+        <h3>彩渱产业链</h3>
     </div>
-    <section class="base_newslist">
-        <div class="content" id="app">
-            <table id="pageTotal">
-                <tbody>
-                    <tr class="news_content" style="display: block;" v-for="item of newsData" :key="item.news_id">
-                        <td>
-                            <a :href="'./newInfo.html?id=' + item.news_id" target="_blank">
-                                <img :src="item.pic_url">
-                                <div class="describe">
-                                    <div class="sub_title">{{ item.title }}</div>
-                                    <div class="news_date">{{ item.create_time }}
-                                        <span v-show="item.is_top === 1" class="newsStick">置顶</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="page-list" v-if="pages != [] && last_page != 1">
-                <span id="barcon">
-                    <a href="javascript:void(0);" @click="lastPage">&lt;</a>
-                    <a href="javascript:void(0)" v-for="item in pages" @click="jumpPage(item)">
-                        <div>{{ item }}</div>
-                    </a>
-                    <a href="javascript:void(0);" @click="nextPage">&gt;</a>
-                </span>
+    <section class="base_news" id="app">
+        <div class="content" id="newsContent" style="width: 800px;">
+            <h3>彩渱高科由三大主要的业务版图组成: 收集、处置、原料供给</h3>
+            <div>
+              <p>在收集端，利用物联网、人工智能（AI）技术构建强大的废弃物收集装置,历经数年总投入上亿元，研发成功的针对十多种产废企业的物联网设备---收集宝，已铺设到上万家产废企业，预计2020年达到30万家，江浙一带多至几百万家庞大的产废企业数量，给收集宝的铺设奠定了巨大的潜力。</p>
+              <p>在处置端，首创全球废弃物处置行业“项目交叉、原料循环、能量互换、以废治废”的静脉协同处置模式，整体装置实现了无人化、清洁化运作，大大降低了处置成本，被国家生态环境部列入全国第一批环保示范公众开放基地。</p>
+              <p>在原料供给端，由千千万万物联网设备铺设的基础上，形成了环保大数据—天网。经过数据挖掘和数据分析，推测企业的生产运营状况，并在此基础上展开原料电商。庞大的产废企业数量，每家企业庞大的原料需求量，为原料电商的展开提供了强大的基础。</p>
             </div>
         </div>
     </section>
@@ -123,9 +113,9 @@
                     </dl>
                     <dl>
                         <dt>核心竞争力</dt>
-                        <dd><a href="./product.html#catalyst">机电一体技术</a></dd>
+                        <dd><a href="./product.html#wasteOil">机电一体技术</a></dd>
                         <dd><a href="./product.html#dataAnalysis">数据信息技术</a></dd>
-                        <dd><a href="./product.html#wasteOil">末端处置技术</a></dd>
+                        <dd><a href="./product.html#catalyst">末端处置技术</a></dd>
                         <dd><a href="./product.html#artFactory">艺术创新</a></dd>
                     </dl>
                     <dl>
@@ -198,73 +188,7 @@
     <!--  }-->
     <!--  gtag('js', new Date());-->
     <!--  gtag('config', 'UA-99737932-1');-->
-    <script src="config.js"></script>
-    <script>
-        new Vue({
-            el: '#app',
-            data: {
-                api: api + '/api/news/getList',
-                newsData: [],
-                current_page: 1,
-                last_page: 0,
-                per_page: '',
-                total: '',
-                pages: []
-            },
-            mounted: function () {
-                var that = this;
-                this.getDatas(this.current_page)
-            },
-            methods: {
-                getDatas: function (current_page) {
-                    var that = this;
-                    this.pages = [];
-                    $.ajax({
-                        url: that.api,
-                        type: 'GET',
-                        dataType: 'json',
-                        data: {
-                            size: 6,
-                            page: current_page
-                        },
-                        success: function (data) {
-                            that.newsData = data.data.data
-                            that.current_page = data.data.current_page;
-                            that.last_page = data.data.last_page;
-                            that.per_page = data.data.per_page;
-                            that.total = data.data.total;
-                            for (var i = 0; i < data.data.last_page; i++) {
-                                that.pages.push(i + 1)
-                            }
-                            $("html, body").animate({scrollTop: 0}, 400);
-                            return false;//不要这句会有点卡顿
-                        },
-                        error: function () {
-                            console.log('error')
-                        }
-                    });
-                },
-                lastPage:function() {
-                    var that = this;
-                    var current_page = parseInt(that.current_page) -1;
-                    this.getDatas(current_page)
-                },
-                nextPage:function() {
-                    var that = this;
-                    var current_page = parseInt(this.current_page);
-                    if (current_page == this.last_page) {
-                        return false;
-                    }
-                    var next_page = parseInt(that.current_page) + 1;
-                    this.getDatas(next_page);
-                },
-                jumpPage:function (pageNumber) {
-                    this.getDatas(pageNumber)
-                }
-            }
-        });
-    </script>
-    <script src="./js/noIe.js"></script>
+    
 </body>
 
 </html>

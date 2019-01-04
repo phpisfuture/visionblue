@@ -17,7 +17,6 @@
     <link href="css/common.0ab349fb.css" rel="stylesheet">
     <script src="lib/jquery.min.js"></script>
     <script src="lib/modernizr-custom.js"></script>
-    <script src="lib/vue.min.js"></script>
     <script>
         var _hmt = _hmt || [];
         (function () {
@@ -27,9 +26,20 @@
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
-    <link rel="stylesheet" href="css/newslist.e4a701c7.css">
+    <link rel="stylesheet" href="css/news.7ac122c6.css">
     <!--[if lte IE 8]>
     <script src="js/ie6-warning.621f8fb1.js"></script><![endif]-->
+    <style>
+        @media only screen and (max-width: 1920px) {
+            .base_news {
+                width: 1200px;
+                min-width: 1200px;
+                margin: 0 auto;
+                color: #464749;
+                min-height: calc(100vh - 600px);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -52,7 +62,7 @@
                     </li>
                     <li class="resolve">
                         <a href="javascript:void(0)">核心竞争力<i class="icon-down"></i></a>
-                        <div class="selec-det resolve-det clearfix">
+                        <div class="selec-det resolve-det clearfix"  >
                             <div class="selec-con clearfix">
                                 <a href="./product.html#catalyst">机电一体技术</a>
                                 <a href="./product.html#dataAnalysis">数据信息技术</a>
@@ -77,35 +87,15 @@
         </div>
     </nav>
     <div class="news-title">
-        <h3>企业动态</h3>
+        <h3>彩渱生态</h3>
     </div>
-    <section class="base_newslist">
-        <div class="content" id="app">
-            <table id="pageTotal">
-                <tbody>
-                    <tr class="news_content" style="display: block;" v-for="item of newsData" :key="item.news_id">
-                        <td>
-                            <a :href="'./newInfo.html?id=' + item.news_id" target="_blank">
-                                <img :src="item.pic_url">
-                                <div class="describe">
-                                    <div class="sub_title">{{ item.title }}</div>
-                                    <div class="news_date">{{ item.create_time }}
-                                        <span v-show="item.is_top === 1" class="newsStick">置顶</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="page-list" v-if="pages != [] && last_page != 1">
-                <span id="barcon">
-                    <a href="javascript:void(0);" @click="lastPage">&lt;</a>
-                    <a href="javascript:void(0)" v-for="item in pages" @click="jumpPage(item)">
-                        <div>{{ item }}</div>
-                    </a>
-                    <a href="javascript:void(0);" @click="nextPage">&gt;</a>
-                </span>
+    <section class="base_news" id="app">
+        <div class="content" id="newsContent" style="width: 800px;">
+            <div>
+              <p style="font-weight: bold">彩渱高科旗下现有三家子公司：浙江斓云数据有限公司（大数据）、浙江蓝景科技有限公司（收集）、浙江绿保再生资源科技有限公司（处置）。这三家子公司同时承担着彩渱高科的三块关键业务版图。</p>
+              <p>浙江斓云数据有限公司从事产业大数据、人工智能（AI）以及区块链的技术研发。其自主开发的智慧“城市末端”云管理系统，利用物联网设备、区块链技术链接废弃物产生端-物流端-处置端，达到废弃物流转信息协同对应，促使城市废弃物靶向流动，把垃圾放到了正确的地方。开发的“天网云仓（收集宝）系统”已成功为机械加工、塑料制造、汽修、医疗、餐厨等行业提供一站式服务。同时通过整个废弃物生态网络的运行，运用云计算分析，把数字信息转化为供应链应用；聚焦企业需求，减少供应链中间流转环节，为企业降本增效。</p>
+              <p>浙江蓝景科技有限公司从事废弃物低碳化、数字化运营及提供企业供应链金融等服务。利用智慧“城市末端”云管理平台、企业供应链云服务平台，根据区域产业行业特性，创建了一个不同于传统的废弃物回收处置生态，为政府和企业提供一站式环境安全解决方案。已成功在全国范围内为中国石化落实生产责任者延伸制度提供全流程服务，为富士康（中国）、上汽集团、杰克股份等国内大型企业以及杭州、宁波、温州、台州、嘉兴、绍兴等地区的12804家小微企业提供环境安全服务，同时为企业提供供应链金融一体化解决方案；至2021年完成服务30万家企业，供应链金融200亿元的战略目标。</p>
+              <p>浙江绿保再生资源科技有限公司联合江苏久吾高科技股份有限公司（股票代码：300631），从事危险废弃物处置设施运营，循环利用设备销售、废弃物处置工程建造EPC业务。绿保科技首创全球废弃物处置行业“项目交叉、原料循环、能量互换、以废治废”的静脉协同处置模式，建成投产的废弃物资源开发4.0工业示范中心，循环利用机械、塑料行业危险废物15000吨，整体装置实现了无人化、清洁化运作，避免了危废处置邻避效应，达到国际领先水平，被国家生态环境部列入全国第一批环保示范公众开放基地、台州市500精英A类项目。2019年，绿保科技与战略合作伙伴中国石化集团在全国范围内共同建设“一省一中心”危废处置项目，创建全国标杆性静脉产业协同处置集聚群，引领危废处置行业循环化、清洁化生产，为中国环保事业再度发力。</p>
             </div>
         </div>
     </section>
@@ -123,9 +113,9 @@
                     </dl>
                     <dl>
                         <dt>核心竞争力</dt>
-                        <dd><a href="./product.html#catalyst">机电一体技术</a></dd>
+                        <dd><a href="./product.html#wasteOil">机电一体技术</a></dd>
                         <dd><a href="./product.html#dataAnalysis">数据信息技术</a></dd>
-                        <dd><a href="./product.html#wasteOil">末端处置技术</a></dd>
+                        <dd><a href="./product.html#catalyst">末端处置技术</a></dd>
                         <dd><a href="./product.html#artFactory">艺术创新</a></dd>
                     </dl>
                     <dl>
@@ -198,73 +188,7 @@
     <!--  }-->
     <!--  gtag('js', new Date());-->
     <!--  gtag('config', 'UA-99737932-1');-->
-    <script src="config.js"></script>
-    <script>
-        new Vue({
-            el: '#app',
-            data: {
-                api: api + '/api/news/getList',
-                newsData: [],
-                current_page: 1,
-                last_page: 0,
-                per_page: '',
-                total: '',
-                pages: []
-            },
-            mounted: function () {
-                var that = this;
-                this.getDatas(this.current_page)
-            },
-            methods: {
-                getDatas: function (current_page) {
-                    var that = this;
-                    this.pages = [];
-                    $.ajax({
-                        url: that.api,
-                        type: 'GET',
-                        dataType: 'json',
-                        data: {
-                            size: 6,
-                            page: current_page
-                        },
-                        success: function (data) {
-                            that.newsData = data.data.data
-                            that.current_page = data.data.current_page;
-                            that.last_page = data.data.last_page;
-                            that.per_page = data.data.per_page;
-                            that.total = data.data.total;
-                            for (var i = 0; i < data.data.last_page; i++) {
-                                that.pages.push(i + 1)
-                            }
-                            $("html, body").animate({scrollTop: 0}, 400);
-                            return false;//不要这句会有点卡顿
-                        },
-                        error: function () {
-                            console.log('error')
-                        }
-                    });
-                },
-                lastPage:function() {
-                    var that = this;
-                    var current_page = parseInt(that.current_page) -1;
-                    this.getDatas(current_page)
-                },
-                nextPage:function() {
-                    var that = this;
-                    var current_page = parseInt(this.current_page);
-                    if (current_page == this.last_page) {
-                        return false;
-                    }
-                    var next_page = parseInt(that.current_page) + 1;
-                    this.getDatas(next_page);
-                },
-                jumpPage:function (pageNumber) {
-                    this.getDatas(pageNumber)
-                }
-            }
-        });
-    </script>
-    <script src="./js/noIe.js"></script>
+    
 </body>
 
 </html>
