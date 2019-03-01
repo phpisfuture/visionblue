@@ -49,15 +49,15 @@
 
     .pro-SWC {
       width: 100%;
+      height: 690px;
       display: -ms-flexbox;
       display: flex;
-      margin-bottom: 250px;
       color: #464749;
-      padding-top: 250px;
+      padding-top: 50px;
     }
 
     .pro-SWC .swc {
-      width: 40%;
+      width: 30%;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-align: center;
@@ -68,7 +68,7 @@
     }
 
     .pro-SWC img {
-      margin: auto;
+      width: 50%;
     }
 
     .pro-SWC .swc .swc-name {
@@ -113,6 +113,87 @@
       width: 50%;
       height: 50%;
       margin: auto;
+    }
+
+    /* 改版1 */
+    .img_one,
+    .img_tow {
+      float: left;
+    }
+
+    .img_tow {
+      margin-left: 70px;
+    }
+
+    .img_one p,
+    .img_tow p {
+      color: #464749;
+      font-size: 14px;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    .section {
+      margin-top: 100px;
+    }
+
+    .section-nodes {
+        position: relative;
+        margin-bottom: 50px;
+        height: 530px;
+        background-color: #eef2f3
+    }
+
+    .section-nodes .business {
+        height: 100%;
+        position: absolute;
+        right: 0
+    }
+
+    .section-nodes > .business > img {
+        height: 88%;
+        margin-top: 12%;
+        margin-right: 88px;
+        display: none
+    }
+
+    .section-nodes .business-des {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        text-align: left;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center
+    }
+
+    .section-nodes .business-des .business-pro {
+        margin-left: 100px
+    }
+
+    .section-nodes .business-des .business-pro p {
+        margin-bottom: 10px
+    }
+
+    .section-nodes .business-des .business-pro a {
+        color: #464749
+    }
+
+    .section-nodes .business-des h1 {
+        height: 50px;
+        line-height: 50px;
+        font-size: 32px;
+        font-weight: bold;
+        color: #464749
+    }
+
+    .section-nodes .business-des p {
+        height: 32px;
+        line-height: 32px;
+        font-size: 20px;
+        color: #464749
     }
   </style>
 </head>
@@ -171,6 +252,27 @@
   </div>
   <!--=======content=====-->
   <div class="pro-layout">
+    <div class="pro-SWC" style="height:380px;">
+      <div class="swc" style="width: 100%;padding:0;margin:0;">
+          <div class="swc-name">
+            <!--i(_src='img/product/α@2x.png')-->
+            <h1>假如，有一天</h1>
+            <p>浙江斓云数据有限公司自主开发的智慧“城市末端”云管理系统，利用物联网设备、区块链技术链接废弃物产生端-物流端-处置端，达到废弃物流转信息
+                协同对应，促使城市废弃物靶向流动。开发的“天网云仓（收集宝）系统”，可满足不同行业不同需求，为企业提供一站式服务。同时运用云计算分析，
+                把数字信息转化为供应链应用，减少供应链中间流转环节，为企业降本增效。</p>
+          </div>
+        </div>
+    </div>
+    <div class="img_box">
+        <div class="img_one">
+          <img src="img/industry/jxjg.png">
+          <p>机械加工</p>
+        </div>
+        <div class="img_tow">
+        <img src="img/industry/fy.png">
+        <p>废油</p>
+      </div>
+    </div>
     <div class="pro-SWC" id="machinery">
       <img src="img/industry/machinery.png">
       <div class="swc">
@@ -245,6 +347,18 @@
     <!-- 塑料行业 -->
     <div class="return-top" id="topButton">
       <img src="./img/industry/up.png">
+    </div>
+    <div class="section section-nodes" id="trigger-sensor">
+        <div class="business">
+            <img src="img/industry/about_us.png" style="display: block;">
+        </div>
+        <div class="business-des">
+            <div class="business-pro">
+                <h1>和 RAINBOW 一起</h1>
+                <p>了解我们在中国的服务和政策，以及合作伙伴计划</p>
+                <a href="product.html#contact_us">联系我们 &gt;</a>
+            </div>
+        </div>
     </div>
   </div>
   <script>
