@@ -205,8 +205,7 @@ body {
 
 .v-title {
     color: #464749;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 22px;
     padding-top: 150px;
     margin-bottom: 50px
 }
@@ -338,13 +337,13 @@ body {
 
 .con-join .join-img {
     display: block;
-    height: 480px;
+    height: 460px;
     margin-top: 20px
 }
 
 .con-join .join {
     width: 62%;
-    color: #50617e
+    color: #464749;
 }
 
 .con-join .join .join-mes {
@@ -354,6 +353,7 @@ body {
 
 .con-join .join h1 {
     font-size: 32px;
+    font-weight: bold;
     margin-bottom: 20px
 }
 
@@ -389,4 +389,14 @@ body {
     width: 906px;
     margin-left: auto;
     margin-right: auto
+}
+
+/* 改版1 */
+.we_box .sec-parterner {
+    width: 45%;
+    float:left;
+}
+
+.we_box .sec-parterner > img {
+    width: 100%;
 }

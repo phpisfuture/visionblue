@@ -63,6 +63,17 @@
                 padding-left: 0
             }
         }
+
+        /* 改版1 */
+        .banner-box {
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .banner-box img {
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -111,8 +122,9 @@
         </div>
     </nav>
     <div class="layout billboard">
-        <div class="fixedRatio billboard-left"></div>
-        <div class="fixedRatio billboard-right"></div>
+        <div class="banner-box">
+            <img src="img/about/banner.png">
+        </div>
         <!-- <div class="banner-board">
             <div class="banner-pro">
                 <h1>彩渱高科</h1>
@@ -128,46 +140,45 @@
             </div>
         </div> -->
     </div>
-    <div style="margin-top: -900px;">
+    <div>
         <div class="layout billboard">
             <div class="content-wrap">
-                <div class="sec-parterner">
-                    <h2 class="v-title" style="padding-top: 0;margin-bottom: 25px">我们专业</h2>
-                    <img src="img/about/professional.png" style="width: 100%;box-shadow: 0px 0px 10px rgba(0,0,0,0.3);">
+                <div class="we_box">
+                    <div class="sec-parterner">
+                        <img src="img/about/professional.png">
+                        <h2 class="v-title" style="padding-top: 10px;padding-bottom:10px;margin-bottom:0">We are professional</h2>
+                        <h2 class="v-title" style="padding-top:0">我们专业</h2>
+                    </div>
+                    <div class="sec-parterner" style="margin-left:5%;">
+                        <img src="img/about/focus.png">
+                        <h2 class="v-title" style="padding-top: 10px;padding-bottom:10px;margin-bottom:0">We focus on</h2>
+                        <h2 class="v-title" style="padding-top:0">我们专注</h2>
+                    </div>
                 </div>
-                <div class="sec-parterner">
-                    <h2 class="v-title" style="padding-top: 0;margin-bottom: 25px">我们专注</h2>
-                    <img src="img/about/focus.png" style="width: 100%;box-shadow: 0px 0px 10px rgba(0,0,0,0.3);">
+                <div class="we_box">
+                    <div class="sec-parterner" style="margin-bottom: 25px;">
+                        <img src="img/about/study.png">
+                        <h2 class="v-title" style="padding-top: 10px;padding-bottom:10px;margin-bottom:0">We study</h2>
+                        <h2 class="v-title" style="padding-top:0">我们钻研</h2>
+                    </div>
+                    <div class="sec-parterner" style="margin-bottom: 0;margin-left:5%;">
+                            <img src="img/about/happyy.png">
+                            <h2 class="v-title" style="padding-top: 10px;padding-bottom:10px;margin-bottom:0">We are happy</h2>
+                            <h2 class="v-title" style="padding-top:0">我们快乐</h2>
+                    </div>
                 </div>
-                <div class="sec-parterner" style="margin-bottom: 25px;">
-                    <h2 class="v-title" style="padding-top: 0;margin-bottom: 25px">我们钻研</h2>
-                    <img src="img/about/study.png" style="width: 100%;box-shadow: 0px 0px 10px rgba(0,0,0,0.3);">
-                </div>
-                <div class="sec-parterner" style="margin-bottom: 0">
-                    <h2 class="v-title" style="padding-top: 0;margin-bottom: 25px">我们更快乐！</h2>
-                </div>
+                <div class="clearfix"></div>
+                <div class="sec-investor">
+                        <h2 class="ptn-det">合作伙伴</h2>
+                        <ul class="investor-con clearfix">
+                            <li><img class="investor-item miccrosoft" src="img/about/logo/changcheng.png"></li>
+                            <li><img class="investor-item bosch" src="img/about/logo/jack.png"></li>
+                            <li><img class="investor-item nokia" src="img/about/logo/foxconn.png"></li>
+                        </ul>
+                    </div>
                 <div class="sec-parterner">
                     <h2 class="v-title" style="padding-top: 120px;">成长伙伴计划</h2>
-                    <ul class="parterner-con clearfix">
-                        <li class="parterner-item" style="margin-left: 0"><img src="img/about/wall/huoban1.png"></li>
-                        <li class="parterner-item"><img src="img/about/wall/huoban3.png"></li>
-                        <li class="parterner-item"><img src="img/about/wall/huoban1.png"></li>
-                        <li class="parterner-item"><img src="img/about/wall/huoban3.png"></li>
-                        <li class="parterner-item"><img src="img/about/wall/huoban3.png"></li>
-                        <li class="parterner-item" style="margin-left: 0"><img src="img/about/wall/huoban1.png"></li>
-                        <li class="parterner-item"><img src="img/about/wall/huoban3.png"></li>
-                        <li class="parterner-item"><img src="img/about/wall/huoban1.png"></li>
-                        <li class="parterner-item"><img src="img/about/wall/huoban3.png"></li>
-                        <li class="parterner-item"><img src="img/about/wall/huoban3.png"></li>
-                    </ul>
-                </div>
-                <div class="sec-investor">
-                    <h2 class="ptn-det">合作伙伴</h2>
-                    <ul class="investor-con clearfix">
-                        <li><img class="investor-item miccrosoft" src="img/about/logo/changcheng.png"></li>
-                        <li><img class="investor-item bosch" src="img/about/logo/jack.png"></li>
-                        <li><img class="investor-item nokia" src="img/about/logo/foxconn.png"></li>
-                    </ul>
+                    <img src="img/about/growth.png" style="width: 100%;">
                 </div>
                 <!--hr.divider-->
                 <!--荣誉-->
@@ -175,8 +186,8 @@
                     <h2 class="v-title">所获得荣誉与奖项</h2>
                     <ul class="investor-con clearfix">
                         <li style="margin-right: 100px;"><img class="investor-item miccrosoft" src="img/about/logo/rongyu1.png"></li>
-                        <li style="margin-right: 100px;"><img class="investor-item bosch" src="img/about/logo/rongyu2.png"></li>
-                        <li><img class="investor-item nokia" src="img/about/logo/rongyu3.png"></li>
+                        <li style="margin-right: 100px;"><img class="investor-item bosch" style="width: 80%;" src="img/about/logo/tz500.png"></li>
+                        <li style="margin-top:30px;"><img class="investor-item nokia" style="width: 70%;" src="img/about/logo/china_environment.png"></li>
                     </ul>
                 </div>
             </div>
@@ -185,8 +196,9 @@
             <div class="join-us">
                 <div class="join">
                     <div class="join-mes">
-                        <h1>伙伴分享计划</h1>
-                        <a href="./product.html#prod_order">了解更多 &gt</a>
+                        <h1>和 RAINBOW 一起</h1>
+                        <p>了解我们在中国的服务和政策，以及合作伙伴计划</p>
+                        <a href="./product.html#prod_order">联系我们</a>
                     </div>
                 </div>
                 <img class="join-img" src="./img/about/aboutus.png" alt="">
