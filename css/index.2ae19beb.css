@@ -1052,16 +1052,16 @@ body.hide-scroll-bar {
     right: 0
 }
 
-.section-nodes img {
-    height: 100%;
-    width: 100%;
+.section-nodes > .business > img {
+    width: 470px;
+    margin-top:7px;
+    margin-right: 88px;
     display: none
 }
 
 .section-nodes .business-des {
     position: absolute;
     top: 0;
-    right: 0;
     width: 50%;
     height: 100%;
     text-align: left;
@@ -1080,7 +1080,7 @@ body.hide-scroll-bar {
 }
 
 .section-nodes .business-des .business-pro a {
-    color: #fff
+    color: #464749
 }
 
 .section-nodes .business-des h1 {
@@ -1088,7 +1088,7 @@ body.hide-scroll-bar {
     line-height: 50px;
     font-size: 32px;
     font-weight: bold;
-    color: #fff
+    color: #464749
 }
 
 .section-nodes .business-des p {

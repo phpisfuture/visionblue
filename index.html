@@ -104,6 +104,12 @@
         .case-info .quote-name, .case-info .quote-role {
             font-size: 13px
         }
+
+        /* 改版1 */
+        .left-box,
+        .right-box {
+            width: 50%;
+        }
     </style>
     <!--[if lte IE 8]><![endif]-->
 </head>
@@ -152,16 +158,6 @@
             </div>
         </div>
     </nav>
-    <!-- <script>
-        $('.page-nav').mouseenter(function () {
-            $('#userImg').attr('src', 'webfonts/yonghu.png')
-        })
-        $('.page-nav').mouseleave(function () {
-            setTimeout(function () {
-                $('#userImg').attr('src', 'webfonts/yonghu1.png')
-            }, 1000)
-        })
-    </script> -->
     <div class="section section-index">
         <div class="partner-platform">
             <div class="billboard sec-con">
@@ -187,35 +183,45 @@
     </div>
     <div id="app">
         <div class="response-layout">
-            <template v-for="item of oneImgList">
-                <div class="case-info" style="padding-top:40px;margin-bottom:130px;">
-                    <div class="desc-wrap">
-                        <div class="main-info">
-                            <h4 class="case-subTitle">{{ item.title_one }}</h4>
-                            <h3 class="case-title">{{ item.title_two }}</h3>
-                            <p class="case-desc">{{ item.title_three }}</p>
+            <template>
+                <div class="platform sec-con center">
+                    <div class="cont-safe-left">
+                        <a href="#">
+                            <img src="img/index/zjly.png" alt="" style="width: 590px;">
+                        </a>
+                    </div>
+                    <div class="cont-safe-right">
+                        <div class="safe-locat">
+                            <a href="#">
+                                <img src="img/index/zjlj.png" style="width: 590px;">
+                            </a>
                         </div>
-                        <div class="sub-info" v-if="item.title_one != '彩渱高科'">
-                            <span class="count-number">{{ item.desc_one }}</span>
-                            <span class="count-unit"></span>
-                            <p class="detail-desc">{{ item.desc_two }}</p>
-                        </div>
-                        <div class="sub-info" v-else>
-                            <span class="count-number" style="font-size: 46px;display:block;margin-bottom: 15px;">{{ item.desc_one }}</span>
-                            <span class="count-number" style="font-size: 45px;display:block;">{{ item.desc_two }}</span>
-                            <!-- <p class="detail-desc">
-                                介绍内容介绍内容介绍内容介绍内容
-                                介绍内容介绍内容介绍内容介绍内容
-                                介绍内容介绍内容
-                            </p> -->
+                        <div class="safe-intell">
+                            <a href="#">
+                                <img src="img/index/zjlb.png" alt="" style="width: 590px;">
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="station sec-con anchor">
                     <div class="station-con clearfix">
                         <a class="station-grid" href="#">
-                            <img class="installed-station" :src="item.pic_url">
+                            <img class="installed-station" src="img/index/zjchgk.png">
                         </a>
+                    </div>
+                </div>
+                <div class="section section-nodes" id="trigger-sensor">
+                    <div class="business">
+                        <img src="img/index/about_user.png">
+                        <img src="img/index/about_user.png">
+                        <img src="img/index/about_user.png" style="display: block;">
+                    </div>
+                    <div class="business-des">
+                        <div class="business-pro">
+                            <h1>和 RAINBOW 一起</h1>
+                            <p>了解我们在中国的服务和政策，以及合作伙伴计划</p>
+                            <a href="product.html#contact_us">联系我们 &gt;</a>
+                        </div>
                     </div>
                 </div>
             </template>
@@ -348,40 +354,39 @@
                 threeImgList: [''],
                 oneImgList: []
             },
-            mounted: function () {
-                var that = this;
-                $.ajax({
-                    url: that.api,
-                    type: 'GET',
-                    dataType: 'json',
-                    data: {},
-                    success: function (data) {
-                        var _data = data.data.data;
-                        for (var i = 0; i < _data.length; i++) {
-                            if (Array.isArray(_data[i].pic_url)) {
-                                that.threeDataList = _data[i];
-                                that.threeImgList = _data[i].pic_url;
-                                console.log(that.threeImgList)
-                            } else {
-                                that.oneImgList.push(_data[i])
-                            }
-                        }
-                    },
-                    error: function () {
-                        console.log('error');
-                    }
-                });
-            }
+            // mounted: function () {
+            //     var that = this;
+            //     $.ajax({
+            //         url: that.api,
+            //         type: 'GET',
+            //         dataType: 'json',
+            //         data: {},
+            //         success: function (data) {
+            //             var _data = data.data.data;
+            //             for (var i = 0; i < _data.length; i++) {
+            //                 if (Array.isArray(_data[i].pic_url)) {
+            //                     that.threeDataList = _data[i];
+            //                     that.threeImgList = _data[i].pic_url;
+            //                     console.log(that.threeImgList)
+            //                 } else {
+            //                     that.oneImgList.push(_data[i])
+            //                 }
+            //             }
+            //         },
+            //         error: function () {
+            //             console.log('error');
+            //         }
+            //     });
+            // }
         });
     </script>
     <script>
-        (function(){
+        (function () {
             var bp = document.createElement('script');
             var curProtocol = window.location.protocol.split(':')[0];
             if (curProtocol === 'https') {
                 bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-            }
-            else {
+            } else {
                 bp.src = 'http://push.zhanzhang.baidu.com/push.js';
             }
             var s = document.getElementsByTagName("script")[0];
